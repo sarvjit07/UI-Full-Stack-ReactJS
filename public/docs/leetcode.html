@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leetcode</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            font-size: 18px;
+            font-family: Arial;
+            background-color: rgb(218, 216, 216);
+        }
+        header span {
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-left: 2px;
+            margin-right: 2px;
+            background-color: rgb(235, 233, 233);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .js {
+            background-color: rgb(237, 237, 3);
+            padding: 2px;
+            border-radius: 5px;
+        }
+        .btn-premium {
+            background-color: bisque;
+            padding: 5px;
+            border-radius: 10px;
+            color: goldenrod;
+        }
+        section {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            grid-gap: 10px;
+            height: 650px;
+            padding: 10px;
+        }
+        body{
+            background-color: rgb(218, 216, 216);
+        }
+
+        .panel-left-shortcuts{
+            font-size: 18px;
+            padding: 10px;
+            background-color: rgb(226, 225, 225);
+            display: flex;
+            justify-content: space-between;
+        }
+        .panel-left-shortcuts span{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        h1{
+            font-family: monospace;
+            font-size: 22px;
+        }
+        h2{
+            font-family: monospace;
+            font-size: 18px;
+        }
+        .btn-easy{
+            background-color: lightgray;
+            border-radius: 5px;
+            padding: 5px;
+            font-family: Arial;
+            margin-right: 20px;
+        }
+        .bi-lock{
+            background-color: rgb(228, 227, 227);
+            border-radius: 5px;
+            padding: 5px;
+            font-family: Arial;
+            color: rgb(93, 197, 162);
+
+        }
+        .note{
+            margin-top: 20px;
+            font-size: 14px;
+            font-family: Arial;
+            line-height:30px;
+        }
+        .note samp{
+            border: 1px solid lightgrey;
+            background-color: rgb(235, 233, 233);
+            border-radius: 5px;
+            padding: 2px;
+        }
+
+        .constraints{
+            border: 1px solid lightgrey;
+            background-color: rgb(235, 233, 233);
+            border-radius: 5px;
+            padding: 2px;
+            width: 150px !important;
+        }
+
+        .companies{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            background-color: rgb(238, 235, 235);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid rgb(214, 211, 211);
+            color: rgb(78, 76, 76);
+        }
+
+        .discussion{
+            display: flex;
+            justify-content: space-between;
+            color: rgb(78, 76, 76);
+            background-color: rgb(238, 235, 235);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid rgb(214, 211, 211);
+        }
+
+
+
+        .panel-left, .panel-right {
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            overflow: auto;
+        }
+
+
+
+        .panel-right-shortcuts{
+            font-size: 15px;
+            font-family: Arial;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            background-color: rgb(238, 237, 237);
+            padding: 5px;
+        }
+        .panel-right-shortcuts span{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .code{
+            display: flex;
+            justify-content: space-between;
+        }
+        .code span{
+            padding-left: 10px;
+            padding-right: 5px;
+        }
+        .bi-code-slash{
+            color: rgb(10, 244, 10);
+        }
+        .code2{
+            color: black;
+            font-weight: bold;
+            font-family: Arial;
+         }
+         pre{
+            margin-left: -150px;
+            font-size: 16px;
+         }
+         var{
+            color: blue;
+         }
+         code samp{
+            color: green;
+            margin-left: -50px;
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="js">JS</span>
+            <span>30 days of Javascript</span>
+            <span class="bi bi-chevron-left"></span>
+            <span class="bi bi-chevron-right"></span>
+            <span class="bi bi-shuffle"></span>
+        </div>
+        <div>
+            <span class="bi bi-bug"></span>
+            <span class="bi bi bi-play-btn "> Run</span>
+            <span class="bi bi-cloud-upload"></span>
+            <span>Submit</span>
+            <span class="bi bi-sticky"></span>
+        </div>
+        <div>
+            <span class="bi bi-columns-gap"></span>
+            <span class="bi bi-gear"></span>
+            <span> Register </span>
+            <span> or </span>
+            <span> Sign in </span>
+            <span class="btn-premium"> Premium </span>
+        </div>
+    </header>
+    <section>
+        <div class="panel-left">
+            <div class="panel-left-shortcuts">
+                <div>
+            <span class="bi bi-newspaper"></span>
+            <span class=" bi bi-book"></span>
+            <span class="bi bi-funnel"></span>
+            <span class="bi bi-clock-history"></span>
+        </div>
+        <div>
+            <span class="bi bi-fullscreen"></span>
+            <span class="bi bi-chevron-left"></span>
+        </div>
+        </div>
+        <div>
+            <h1>2667. Create Hello World Function</h1>
+         </div>
+         <div>
+             <span class="btn-easy"> Easy </span>
+             <span class="bi bi-lock"> Companies</span>
+         </div>
+         <div class="note">
+             Write a <small>function</small> <samp><big>createHelloWorld</big></samp>. It should return a new function that always returns <samp>"Hello World"</samp>.
+         </div>
+         <div>
+                 <h2>Example 1:</h2>
+
+                 <pre>
+                     Input: args = []
+                     Output: "Hello World"
+                     Explanation:
+                     const f = createHelloWorld();
+                     f(); // "Hello World"
+                 </pre>
+
+                 The function returned by createHelloWorld should always return "Hello World".
+                 <h2>Example 2:</h2>
+
+                 <pre>
+                     Input: args = [{},null,42]
+                     Output: "Hello World"
+                     Explanation:
+                     const f = createHelloWorld();
+                     f({}, null, 42); // "Hello World"
+                 </pre>
+
+                 Any arguments could be passed to the function but it should still always return "Hello World".
+                 <div>
+                     <h2>Constraints:</h2>
+                      <div class="constraints">0 <= args.length <= 10</div>
+                 </div>
+
+                 <div class="companies">
+                 <span class="bi bi-lock-fill"> Companies</span>
+                 <span class="bi bi-chevron-down"></span>
+                 </div>
+                 <div class="discussion">
+                    <span class="bi bi-chat"> Discussion</span>
+                    <span class="bi bi-chevron-down"></span>
+                    </div>
+         </div>
+     </div>
+
+
+
+
+
+
+        <div class="panel-right">
+            <div class="code">
+                <span class="bi bi-code-slash"><span class="code2">Code</span></span>
+                <div><span class=" bi bi-fullscreen "></span>
+                    <span class=" bi bi-chevron-up "></span></div>
+
+            </div>
+            <div class="panel-right-shortcuts">
+                <div>
+                    <span>Javascript <span class="bi bi-chevron-down"></span></span>
+                    <span class="bi bi-dot">Auto</span>
+                </div>
+                <div>
+                    <span class="bi bi-award"></span>
+                    <span>{ }</span>
+                    <span class="bi bi-arrow-counterclockwise"></span>
+                    <span class="bi bi-fullscreen"></span>
+                </div>
+            </div>
+            <div>
+                <pre>
+                    <code>
+                        <samp>
+                            /**
+                            * @return {Function}
+                            */
+                        </samp>
+                            var <var>createHelloWorld</var> = function() {
+                               
+                                return function(...args) {
+                                   
+                                }
+                            };
+
+                        <samp>
+                            /**
+                            * const <var>f</var> = createHelloWorld();
+                            * f(); // "Hello World"
+                            */
+                        </samp>
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshCart</title>
+    <link
+    rel="stylesheet"
+    href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+  />
+    <style>
+        header{
+            display: flex;
+            justify-content: space-between;
+            font-size: 22px;
+            font-family: Segoe UI;
+            padding: 20px;
+        }
+
+        .brand-title{
+            font-weight: bold;
+            font-size: 28px;
+        }
+        .search-input{
+            font-size: 15px;
+            
+        }
+        .bi-cart{
+            color: green;
+        }
+
+        .shortcut-nav span{
+            padding-right: 8px;
+            font-size: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="bi bi-cart"></span>
+            <span class="brand-title">FreshCart</span>
+        </div>
+        <div>
+            <input class="search-input" type="text" placeholder="Search for products"> 
+            <button class="bi bi-geo-alt"> Location</button>
+        </div>
+        <div>
+            <nav class="shortcut-nav">
+                <span class="bi bi-heart"></span>
+                <span class="bi bi-person"></span>
+                <span class="bi bi-bag-heart-fill"></span>
+            </nav>
+            
+        </div>
+    </header>
+</body>
+</html>
