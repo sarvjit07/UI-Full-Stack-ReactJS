@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landkit.</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <style>
         header{
             font-size: 20px;
@@ -30,7 +31,46 @@
             width: 50px;
             height: 50px;
             text-align: center;
+        }
+        main{
+            font-family: Arial;
+            padding-left:150px;
+            padding-right: 50px !important;
+        }
+        .landkit{
+            color: rgb(63, 63, 229);
             
+        }
+        .main-title{
+            font-size: 60px;
+            padding-top: 150px;
+            font-weight: lighter;
+        }
+        .main-subtitle{
+            font-size: 40px;
+            padding-top: 10px;
+            font-weight: lighter;
+        }
+        .main-text{
+            padding-top: 20px;
+            width: 450px;
+            font-size: 20px;
+            line-height: 30px;
+            color: gray;
+            padding-bottom: 50px;
+        }
+        .btn-pages{
+            display: inline-block;
+            color: white;
+            background-color: blue;
+            padding: 15px;
+        }
+        .btn-docs{
+            background-color: rgb(227, 227, 227);
+            padding: 15px;
+            color: blue;
+            margin-left: 10px;
+
         }
     </style>
 </head>
@@ -51,5 +91,19 @@
             <span class="buy-btn">Buy now</span>
         </div>
     </header>
+    <section>
+        <main>
+            <img class="banner-image" src="../images/landkit-banner.jpg" alt="" align="right" width="50%">
+            <div>
+                <div class="main-title">Welcome to <span class="landkit"> Landkit.</span></div>
+                <div class="main-subtitle">Develop anything.</div>
+                <div class="main-text">Build a beautiful, modern website with flexible Bootstrap components built from scratch.</div>
+                <div>
+                    <span class="btn-pages">View all pages <span class="bi bi-arrow-right"></span></span>
+                    <span class="btn-docs">Documentation</span>
+                </div>
+            </div>
+        </main>
+    </section>
 </body>
 </html>
