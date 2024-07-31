@@ -5,128 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      body {
+      .card{
+        width: 330px;
+        box-shadow: 2px 2px 2px gray;
+        font-family: Arial;
+        margin: 20px;
+        background-color: white;
+      }
+      .card-img-middle{
+        width: 90%;
+        padding-left: 15px;
+        margin-top: 25px;
+        padding-bottom: 30px;
+      }
+      main{
+        display:grid;
+        grid-template-columns: 3fr 3fr 3fr 3fr;
+      }
+      body{
         background-image: linear-gradient(
           to left,
           rgba(172, 77, 77, 0.523),
           rgb(224, 122, 215)
         );
       }
-      .card {
+      .home{
+        
         display: grid;
-        grid-template-columns: 3fr 3fr 3fr 3fr;
-        margin-top: 30px;
-        padding: 18px;
-        gap: 18px;
-        height: 400px;
+        grid-template-columns: 6fr 6fr;
       }
-      .background {
-        background-color: white;
+      .prime{
+        color: rgb(65, 207, 188);
+        font-size: 13px;
+        font-weight: lighter;
+        padding-left: 15px;
+      }
+      .title{
         color: black;
         font-family: Arial;
         font-weight: bold;
         font-size: 20px;
+        padding-top: 20px;
+        padding-left: 15px;
       }
-      .banner-1 {
-        margin: 18px;
-        /* margin-top: 20px; */
+      .title-2{
+        color: black;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 20px;
+        padding-top: 20px;
+        padding-left: 15px;
+        padding-right: 5px;
       }
-      .title {
-        padding: 18px;
+      .card-2{
+        margin-left: 15px;
+        margin-top: 10px;
       }
-      .link {
+      .prime2{
         color: rgb(65, 207, 188);
         font-size: 13px;
         font-weight: lighter;
-        margin: 18px;
+        margin-bottom: 5px;
       }
-
+      .text{
+        font-family: Arial;
+        font-size: 13px;
+        font-weight: lighter !important;
+        color: gray;
+        padding-bottom: 10px;
+        padding-top: 5px;
+      }
+      .Amazon{
+        text-align: center;
+        background-color: none;
+      }
     </style>
+
   </head>
   <body>
-    <div class="card">
-      <div class="background">
-        <div class="title">Great Freedom Sale | Coming soon</div>
-        <div class="banner-1">
-          <img
-            height="320px"
-            width="320px"
-            src="../../images/Freedom-sale.jpg"
-            alt=""
-          />
+    <div class="Amazon"> <span> <img src="../../images/amazon_logo.png" width="15%" height="40%" alt=""></span></div>
+      <main>
+       
+        <div class="card">
+          <div class="title">Great Freedom Sale | Coming soon</div>
+          <img src="../../images/Freedom-sale.jpg" class="card-img-middle">
+          <div class="prime">Join Prime</div>
         </div>
-        <div class="link">Join Prime</div>
-      </div>
 
-<div class="banner-2"><div class="background">
-    <div class="title">Revamp your home in style</div>
-    <div class="banner-1">
-      <img
-        height="100px"
-        width="100px"
-        src="../../images/Freedom-sale.jpg"
-        alt=""
-      />
-    </div>
-    <div class="banner-1">
-        <img
-          height="100px"
-          width="100px"
-          src="../../images/Freedom-sale.jpg"
-          alt=""
-        />
-      </div>
-      <div class="banner-1">
-        <img
-          height="100px"
-          width="100px"
-          src="../../images/Freedom-sale.jpg"
-          alt=""
-        />
-      </div>
-      <div class="banner-1">
-        <img
-          height="100px"
-          width="100px"
-          src="../../images/Freedom-sale.jpg"
-          alt=""
-        />
-      </div>
-    <div class="link">Join Prime</div>
-  </div></div>
-      
-   
-      
-
-
-
-
-
-
-      <div class="background">
-        <div class="title">Great Freedom Sale | Coming soon</div>
-        <div class="banner-1">
-          <img
-            height="320px"
-            width="320px"
-            src="../../images/Freedom-sale.jpg"
-            alt=""
-          />
+        <div class="card">
+          <div class="title-2">Revamp your home in style</div>
+          <div class="card-2">
+          <div class="home">
+            <img src="../../images/Bedsheet.jpg" width="120px" height="115px">
+            <img src="../../images/vases.jpg" width="120px" height="115px">
+            <div class="text">Bedsheet & more</div>
+            <div class="text">Figurines & more
+            </div>
+          </div>
+          <div class="home">
+            <img src="../../images/Home_storage.jpg" width="120px" height="115px">
+            <img src="../../images/Home_lighting.jpg" width="120px" height="115px">
+            <div class="text">Home storage</div>
+            <div class="text">Lighting solutions</div>
+          </div>
+          <div class="prime2">Explore all</div>
         </div>
-        <div class="link">Join Prime</div>
-      </div>
-      <div class="background">
-        <div class="title">Great Freedom Sale | Coming soon</div>
-        <div class="banner-1">
-          <img
-            height="320px"
-            width="320px"
-            src="../../images/Freedom-sale.jpg"
-            alt=""
-          />
         </div>
-        <div class="link">Join Prime</div>
-      </div>
-    </div>
+
+        <div class="card">
+          <div class="title-2">Appliances for your home | Up to 55% off
+          </div>
+          <div class="card-2">
+          <div class="home">
+            <img src="../../images/Appliances-2.jpg" width="120px" height="115px">
+            <img src="../../images/Appliances-3.jpg" width="120px" height="115px">
+            <div class="text">
+              Refrigerators</div>
+            <div class="text">Microwaves</div>
+          </div>
+          <div class="home">
+            <img src="../../images/Appliances.jpg" width="120px" height="115px">
+            <img src="../../images/Appliances-4.jpg" width="120px" height="115px">
+            <div class="text">Air conditioners</div>
+            <div class="text">Washing machines</div>
+          </div>
+          <div class="prime2">Explore all</div>
+        </div>
+        </div>
+
+        <div class="card">
+          <div class="title-2">Starting ₹149 | Headphones
+          </div>
+          <div class="card-2">
+          <div class="home">
+            <img src="../../images/boAt.jpg" width="120px" height="115px">
+            <img src="../../images/Boult.jpg" width="120px" height="115px">
+            <div class="text">Starting ₹249 | boAt</div>
+            <div class="text">Starting ₹549 | Boult</div>
+          </div>
+          <div class="home">
+            <img src="../../images/Noise.jpg" width="120px" height="115px">
+            <img src="../../images/Zeb.jpg" width="120px" height="115px">
+            <div class="text">Starting ₹149 | Noise</div>
+            <div class="text">Starting ₹2549 | Zebronics</div>
+          </div>
+          <div class="prime2">Explore all</div>
+        </div>
+        </div>
+
+      </main>
   </body>
 </html>

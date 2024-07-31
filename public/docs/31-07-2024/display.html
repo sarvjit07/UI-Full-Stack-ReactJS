@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+
+      
+    </div>
+    <div>
+        <div>inline - only take content width</div>
+      <div>block - always take 100% of device width</div>
+      <div>
+        inline-block - Element stays inline but allows as to set height, width
+        and properties
+      </div>
+      <div>display-grid - Divide whole width into fraction [default - colomns --]</div>
+
+      <div>display-flex - Help element to stay with constant-distance any device width [default - Row |]</div>
+    </div>
+    <style>
+      .container {
+        background-color: red;
+        /* display: grid;
+            grid-template-columns: 1fr 2fr 3fr 3fr 3fr; */
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      .container > div {
+        width: 50px;
+        height: 50px;
+        background-color: cadetblue;
+      }
+    </style>
+  </body>
+</html>
