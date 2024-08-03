@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+       header{
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        padding: 10px;
+        font-family: Arial;
+    
+       }
+       .bi-list{
+        font-size: 24px;
+       }
+       .search-bar{
+        display: inline-flex;
+        width: 400px;
+        border: 1px solid gray;
+        border-radius: 20px;
+        padding: 10px;
+        justify-content: space-between;
+       }
+       .bi-mic-fill{
+        margin-left: 30px;
+        background-color: rgb(240, 240, 240);
+        padding: 10px;
+        border-radius: 50%;
+       }
+       .btn-signin{
+        border: 1px solid gray;
+        padding: 10px;
+        border-radius: 17px;
+        font-size:14px;
+        color: rgb(82, 82, 244);
+        font-weight: bold;
+       }
+       .bi-three-dots-vertical{
+        font-size: 20px;
+       }
+       section{
+        display: grid;
+        grid-template-columns: 1fr 11fr;
+        margin-top: 10px;
+       }
+       nav{
+        margin-left: -40px;
+        font-size: 18px;
+        text-align: center;
+
+       }
+       .nav-title{
+        font-size: 14px;
+       }
+       .nav-item{
+        margin-top: 25px;
+        margin-bottom: 25px;
+       }
+       article {
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+            font-family: Arial;
+        }
+        .btn-subscribe {
+            background-color: black;
+            color:white;
+            padding: 10px;
+            border-radius: 20px;
+            width:100px;
+            text-align: center;
+        }
+        .menu {
+            list-style: none;
+            display: flex;
+            font-family: Arial;
+            font-size: 18px;
+            color:gray;
+            margin-left: -50px;
+            border-bottom: 0.5px solid gray;
+            padding-bottom: 20px;
+            position: sticky;
+            top: .10rem;
+            background-color: white;
+            padding-top: 20px;
+            
+
+        }
+        .menu li {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .menu li:first-child {
+            font-weight: bold;
+            color:black;
+            text-decoration: underline;
+        }
+        main {
+            height: 635px;
+            overflow: auto;
+        }
+        .about-us {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            grid-gap: 20px;
+            width: 74%;
+            font-family: Arial;
+    
+        }
+        .about-us iframe{border-radius: 10px;}
+        
+        iframe {
+            border:none;
+            width: 90%;
+            height: 250px;
+        }
+        .about-us div {
+            margin-bottom: 20px;
+        }
+        .playlist {
+            display: grid;
+            grid-template-columns: 2.3fr 2.3fr 2.3fr 2.3fr 2.3fr;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .playlist iframe {
+            border:1px solid gray;
+            height: 150px;
+            border-radius: 10px;
+        }
+        .banner{
+            border-radius: 10px;
+        }
+        .Nit-name{
+            font-size: 28px;
+        }
+        .video-title{
+            display: flex;
+            width: 92%;
+            font-family: Arial;
+            font-size: 15px;
+            /* align-items: center; */
+        }
+        h4{
+            margin-top: 2px;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+        .view{
+            color: gray;
+            font-size: 12px;
+            font-family: Arial;
+            
+        }
+        .para{
+            padding-top: 5px;
+            color: #B0B0B0;
+            font-size: 13px !important;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+    <div>
+        <span class="bi bi-list"></span> 
+        <img src="../../images/ytube.png" width="45%">
+    </div>
+        <div>
+            <span class="search-bar">
+            <span>Search...</span>
+            <span class="bi bi-search"></span>
+        </span>
+        <span class="bi bi-mic-fill"></span>
+        </div>
+        <div>
+            <span class="bi bi-three-dots-vertical"></span>
+            <span class="btn-signin"><span class="bi bi-person-circle">Sign in</span></span>
+        </div>
+    </header>
+    <section>
+        <nav>
+            <div class="nav-item">
+                <span class="bi bi-house-door"></span>
+                <div class="nav-title">Home</div>
+            </div>
+            <div class="nav-item">
+                <span class="bi bi-film"></span>
+                <div class="nav-title"> Shorts</div>
+            </div>
+            <div class="nav-item">
+                <span class="bi bi-camera-video"></span>
+                <div class="nav-title"> Live</div>
+            </div>
+            <div class="nav-item">
+                <span class="bi bi-gear"></span>
+                <div class="nav-title">Settings</div>
+            </div>
+        </nav>
+        <main>
+            <img class="banner" src="../../images/channel_banner.jpg" width="100%">
+            <article>
+                <div>
+                    <img src="../../images/nit-logo.jpg" width="100%">
+                </div>
+                <div>
+                    <h1 class="Nit-name">Naresh i Technologies</h1>
+                    <p>@NareshIT <span class="bi bi-dot"></span>1.27M subscribers <span class="bi bi-dot"></span>3.1K videos</p>
+                    <p>We are one of the software training organization With a library of 200+ courses,</p>
+                    <p><a href="http://www.instagram.com/nareshitech">instagram.com/nareshitech</a>
+                        and 7 more links</p>
+                    <div class="btn-subscribe">Subscribe</div>
+                </div>
+            </article>
+            <ul class="menu">
+                <li>Home</li>
+                <li>Videos</li>
+                <li>Shorts</li>
+                <li>Live</li>
+                <li>Playlists</li>
+                <li>Community</li>
+                <li class="bi bi-search"></li>
+            </ul>
+            <div class="about-us">
+                <div>
+                    <iframe src="https://youtube.com/embed/yBw-6rr5hbA"></iframe>
+                </div>
+                <div>
+                    <div><b>Best Software Training Institute with Placements - Naresh i Technologies</b></div>
+                    <div>223,182 views 4 years ago</div>
+                    <div>Register For Free Demos On New Batches :-</div>
+                    <div>
+                    Placement Assistance Program On JAVA Developer & .Net | <br>
+                    @ 11.00 AM :- https://bit.ly/PAP11J <br>
+                    Free Workshop on Career Transformation from <br>
+                    Non-Tech to Data Science AI & Generative AI | <br>
+                    @ 9:30 AM :- <a href="https://bit.ly/3WB7z3z">https://bit.ly/3WB7z3z</a>
+                    </div>
+                </div>
+            </div>
+            <div><h3>For you</h3></div>
+            <div class="playlist">
+                <div>
+                <iframe src="https://youtube.com/embed/yBw-6rr5hbA"></iframe>
+                <div class="video-title">
+                    <div><h4>UNIX / LINUX Session-2 | Mr. Prasanth | Naresh IT</h4></div>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+                <p class="para">1K views Streamed 20 hours ago</p>
+                </div>
+                
+                <div>
+                    <iframe src=""></iframe>
+                    <div class="video-title">
+                        <div><h4>UNIX / LINUX Session-2 | Mr. Prasanth | Naresh IT</h4></div>
+                        <div class="bi bi-three-dots-vertical"></div>
+                    </div>
+                    <p class="para">1K views Streamed 20 hours ago</p>
+                    </div>
+                    <div>
+                        <iframe src=""></iframe>
+                        <div class="video-title">
+                            <div><h4>UNIX / LINUX Session-2 | Mr. Prasanth | Naresh IT</h4></div>
+                            <div class="bi bi-three-dots-vertical"></div>
+                        </div>
+                        <p class="para">1K views Streamed 20 hours ago</p>
+                        </div>
+                        <div>
+                            <iframe src=""></iframe>
+                            <div class="video-title">
+                                <div><h4>UNIX / LINUX Session-2 | Mr. Prasanth | Naresh IT</h4></div>
+                                <div class="bi bi-three-dots-vertical"></div>
+                            </div>
+                            <p class="para">1K views Streamed 20 hours ago</p>
+                            </div>
+                            <div>
+                                <iframe src=""></iframe>
+                                <div class="video-title">
+                                    <div><h4>UNIX / LINUX Session-2 | Mr. Prasanth | Naresh IT</h4></div>
+                                    <div class="bi bi-three-dots-vertical"></div>
+                                </div>
+                                <p class="para">1K views Streamed 20 hours ago</p>
+                                </div>
+            </div>
+            <hr color="gray" size=".8px">
+            <div><h3>For you</h3></div>
+            <div class="playlist">
+                <div>
+                <iframe src=""></iframe>
+                <div class="video-title">
+                    <div><h4>UNIX / LINUX Session-2 | Mr. Prasanth | Naresh IT</h4></div>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+                <p class="para">1K views Streamed 20 hours ago</p>
+                </div>
+                
+                <div>
+                    <iframe src=""></iframe>
+                    <div class="video-title">
+                        <div><h4>UNIX / LINUX Session-2 | Mr. Prasanth | Naresh IT</h4></div>
+                        <div class="bi bi-three-dots-vertical"></div>
+                    </div>
+                    <p class="para">1K views Streamed 20 hours ago</p>
+                    </div>
+                    <div>
+                        <iframe src=""></iframe>
+                        <div class="video-title">
+                            <div><h4>UNIX / LINUX Session-2 | Mr. Prasanth | Naresh IT</h4></div>
+                            <div class="bi bi-three-dots-vertical"></div>
+                        </div>
+                        <p class="para">1K views Streamed 20 hours ago</p>
+                        </div>
+                        <div>
+                            <iframe src=""></iframe>
+                            <div class="video-title">
+                                <div><h4>UNIX / LINUX Session-2 | Mr. Prasanth | Naresh IT</h4></div>
+                                <div class="bi bi-three-dots-vertical"></div>
+                            </div>
+                            <p class="para">1K views Streamed 20 hours ago</p>
+                            </div>
+                            <div>
+                                <iframe src=""></iframe>
+                                <div class="video-title">
+                                    <div><h4>UNIX / LINUX Session-2 | Mr. Prasanth | Naresh IT</h4></div>
+                                    <div class="bi bi-three-dots-vertical"></div>
+                                </div>
+                                <p class="para">1K views Streamed 20 hours ago</p>
+                                </div>
+            </div>
+        </main>
+    </section>
+</body>
+</html>
