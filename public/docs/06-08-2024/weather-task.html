@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to left, #272e35, #34a0a5);
+            color: rgb(255, 255, 255);
+            font-family: Arial, sans-serif;
+            
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        td, th {
+            padding: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .weather-icon i {
+            font-size: 40px;
+        }
+        .header-row th {
+            border: none;
+            font-size: 24px;
+        }
+        .header-table {
+            margin-bottom: 20px;
+        }
+        .hourly th, .daily th {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 10px 0;
+        }
+        .temp {
+            font-size: 24px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <table class="header-table">
+        <tr class="header-row">
+            <th colspan="3">
+                <table>
+                    <tr>
+                        <th colspan="2">London, UK</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Monday 29 August</th>
+                    </tr>
+                    <tr>
+                        <th class="weather-icon" colspan="2"><i class="fas fa-cloud-sun"></i></th>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="temp">21&deg;</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Mostly sunny</th>
+                    </tr>
+                </table>
+            </th>
+            <th>
+                <table>
+                    <tr>
+                        <th>23&deg;</th>
+                        <th>7mph</th>
+                        <th>05:27</th>
+                    </tr>
+                    <tr>
+                        <td>High</td>
+                        <td>Wind</td>
+                        <td>Sunrise</td>
+                    </tr>
+                    <tr>
+                        <th>14&deg;</th>
+                        <th>0%</th>
+                        <th>20:57</th>
+                    </tr>
+                    <tr>
+                        <td>Low</td>
+                        <td>Rain</td>
+                        <td>Sunset</td>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </table>
+    <table class="hourly">
+        <thead>
+            <tr>
+                <th colspan="7">Today's Weather</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>3am<br><i class="fas fa-cloud-sun"></i><br>14&deg;</td>
+                <td>6am<br><i class="fas fa-cloud-sun"></i><br>16&deg;</td>
+                <td>9am<br><i class="fas fa-cloud-sun"></i><br>17&deg;</td>
+                <td>12pm<br><i class="fas fa-cloud-sun"></i><br>19&deg;</td>
+                <td>3pm<br><i class="fas fa-sun"></i><br>21&deg;</td>
+                <td>6pm<br><i class="fas fa-sun"></i><br>20&deg;</td>
+                <td>9pm<br><i class="fas fa-moon"></i><br>18&deg;</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="daily">
+        <thead>
+            <tr>
+                <th colspan="5">Next 5 Days</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tue<br>30/7<br><i class="fas fa-cloud-sun"></i><br>10&deg; Low<br>21&deg; High<br>12mph Wind<br>0% Rain</td>
+                <td>Wed<br>31/7<br><i class="fas fa-cloud"></i><br>9&deg; Low<br>18&deg; High<br>7mph Wind<br>3% Rain</td>
+                <td>Thur<br>1/8<br><i class="fas fa-cloud-showers-heavy"></i><br>7&deg; Low<br>15&deg; High<br>11mph Wind<br>75% Rain</td>
+                <td>Fri<br>2/8<br><i class="fas fa-sun"></i><br>10&deg; Low<br>21&deg; High<br>3mph Wind<br>5% Rain</td>
+                <td>Sat<br>3/8<br><i class="fas fa-sun"></i><br>12&deg; Low<br>24&deg; High<br>8mph Wind<br>2% Rain</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
