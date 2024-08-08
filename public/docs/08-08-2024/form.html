@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get" align="center">
+        <dl>
+            <dt>Name</dt>
+            <dd><input type="text" required minlength="4" maxlength="10" placeholder="Name min 4 chars" name="UserName"></dd>
+            <dt>Age</dt>
+            <dd><input type="text" required autofocus maxlength="2" name="Age" size="2"></dd>
+            <dt>OTP</dt>
+            <dd><input type="text" required name="OTP" size="4" maxlength="4"></dd>
+            <dt>Country</dt>
+            <dd><input type="text" name="Country" list="countries" placeholder="YOUR COUNTRY"></dd>
+            <datalist id="countries">
+                <option>India</option>
+                <option>China</option>
+                <option>Sri Lanka</option>
+                <option>UK</option>
+                <option>Dubai</option>
+            </datalist>
+        </dl>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
