@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #121212;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 196px;
+            background-color: #000000;
+            padding: 24px;
+        }
+
+        .sidebar .logo img {
+            width: 130px;
+        }
+
+        .sidebar .navigation ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .sidebar .navigation ul li {
+            padding: 10px 0px;
+        }
+
+        .sidebar .navigation ul li a {
+            color: #b3b3b3;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .sidebar .navigation ul li .bi {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .sidebar .policies {
+            position: absolute;
+            bottom: 100px;
+        }
+
+        .sidebar .policies ul {
+            list-style: none;
+        }
+
+        .sidebar .policies ul li {
+            padding-bottom: 5px;
+        }
+
+        .sidebar .policies ul li a {
+            color: #b3b3b3;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 10px;
+        }
+
+        .main-container {
+            margin-left: 245px;
+            margin-bottom: 100px;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #101010;
+            padding: 14px 30px;
+        }
+
+        .topbar .prev-next-buttons button {
+            color: #7a7a7a;
+            cursor: not-allowed;
+            width: 34px;
+            height: 34px;
+            border-radius: 100%;
+            font-size: 18px;
+            border: 0px;
+            background-color: #090909;
+            margin-right: 10px;
+        }
+
+        .topbar .navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .topbar .navbar ul {
+            list-style: none;
+        }
+
+        .topbar .navbar ul li {
+            display: inline-block;
+            margin: 0px 8px;
+            width: 70px;
+        }
+
+        .topbar .navbar ul li a {
+            color: #b3b3b3;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .topbar .navbar ul li.divider {
+            color: #ffffff;
+            font-size: 26px;
+            margin: 0px 20px;
+            width: auto;
+        }
+
+        .topbar .navbar button {
+            background-color: #ffffff;
+            color: #000000;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 14px 30px;
+            border: 0px;
+            border-radius: 40px;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .spotify-playlists {
+            padding: 20px 40px;
+        }
+
+        .spotify-playlists h2 {
+            color: #ffffff;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .spotify-playlists .list {
+            display: flex;
+            gap: 20px;
+            overflow: hidden;
+        }
+
+        .spotify-playlists .list .item {
+            min-width: 140px;
+            width: 160px;
+            padding: 15px;
+            background-color: #181818;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all ease 0.4s;
+        }
+
+        .spotify-playlists .list .item:hover {
+            background-color: #252525;
+        }
+
+        .spotify-playlists .list .item img {
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .spotify-playlists .list .item .play {
+            position: relative;
+        }
+
+        .spotify-playlists .list .item .play .bi {
+            position: absolute;
+            right: 10px;
+            top: -60px;
+            padding: 18px;
+            background-color: #1db954;
+            border-radius: 100%;
+            opacity: 0;
+            transition: all ease 0.4s;
+        }
+
+        .spotify-playlists .list .item:hover .play .bi {
+            opacity: 1;
+            transform: translateY(-20px);
+        }
+
+        .spotify-playlists .list .item h4 {
+            color: #ffffff;
+            font-size: 14px;
+            margin-bottom: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .spotify-playlists .list .item p {
+            color: #989898;
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: 600;
+        }
+
+        .spotify-playlists hr {
+            margin: 70px 0px 0px;
+            border-color: #636363;
+        }
+
+        .preview {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to right, #ae2896, #509bf5);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .preview h6 {
+            color: #ffffff;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .preview p {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .preview button {
+            background-color: #ffffff;
+            color: #000000;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 14px 30px;
+            border: 0px;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo">
+            <a href="#">
+                <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png" alt="Logo" />
+            </a>
+        </div>
+
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="bi bi-house-door"></span>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="bi bi-search"></span>
+                        <span>Search</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="bi bi-journal"></span>
+                        <span>Your Library</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="bi bi-plus-square"></span>
+                        <span>Create Playlist</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="bi bi-heart"></span>
+                        <span>Liked Songs</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="policies">
+            <ul>
+                <li>
+                    <a href="#">Cookies</a>
+                </li>
+                <li>
+                    <a href="#">Privacy</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="topbar">
+            <div class="prev-next-buttons">
+                <button type="button" class="bi bi-chevron-left"></button>
+                <button type="button" class="bi bi-chevron-right"></button>
+            </div>
+
+            <div class="navbar">
+                <ul>
+                    <li>
+                        <a href="#">Premium</a>
+                    </li>
+                    <li>
+                        <a href="#">Support</a>
+                    </li>
+                    <li>
+                        <a href="#">Download</a>
+                    </li>
+                    <li class="divider">|</li>
+                    <li>
+                        <a href="#">Sign Up</a>
+                    </li>
+                </ul>
+                <button type="button">Log In</button>
+            </div>
+        </div>
+
+        
+        <div class="spotify-playlists">
+            <h2>Spotify Playlists</h2>
+
+            <div class="list">
+                <div class="item">
+                    <img src="../../images/1.png" />
+                    <div class="play">
+                        <span class="bi bi-play-fill"></span>
+                    </div>
+                    <h4>This is Arijit Singh</h4>
+                    <p>Spotify . Playlist</p>
+                </div>
+
+                <div class="item">
+                    <img src="../../images/2.png" />
+                    <div class="play">
+                        <span class="bi bi-play-fill"></span>
+                    </div>
+                    <h4>This is Ed Sheeran</h4>
+                    <p>Spotify . Playlist</p>
+                </div>
+                <div class="item">
+                    <img src="../../images/pawan.jpeg" />
+                    <div class="play">
+                        <span class="bi bi-play-fill"></span>
+                    </div>
+                    <h4>Mood Booster</h4>
+                    <p>Spotify . Playlist</p>
+                </div>
+
+                <div class="item">
+                    <img src="../../images/3.png" />
+                    <div class="play">
+                        <span class="bi bi-play-fill"></span>
+                    </div>
+                    <h4>Peaceful Piano</h4>
+                    <p>Spotify . Playlist</p>
+                </div>
+
+                <div class="item">
+                    <img src="../../images/4.png" />
+                    <div class="play">
+                        <span class="bi bi-play-fill"></span>
+                    </div>
+                    <h4>Mood Booster</h4>
+                    <p>Spotify . Playlist</p>
+                </div>
+
+                <div class="item">
+                    <img src="../../images/5.png" />
+                    <div class="play">
+                        <span class="bi bi-play-fill"></span>
+                    </div>
+                    <h4>This is BTS</h4>
+                    <p>Spotify . Playlist</p>
+                </div>
+
+                <div class="item">
+                    <img src="../../images/6.png" />
+                    <div class="play">
+                        <span class="bi bi-play-fill"></span>
+                    </div>
+                    <h4>Discover Weekly</h4>
+                    <p>Spotify . Playlist</p>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="spotify-playlists">
+            <h2>Popular Playlist</h2>
+
+            <div class="list">
+                <div class="item">
+                    <img src="../../images/arjit.jpeg" />
+                    <div class="play">
+                        <span class="bi bi-play-fill"></span>
+                    </div>
+                    <h4>This is Arijit Singh</h4>
+                    <p>Spotify . Playlist</p>
+                </div>
+                <div class="item">
+                    <img src="../../images/pawan.jpeg" />
+                    <div class="play">
+                        <span class="bi bi-play-fill"></span>
+                    </div>
+                    <h4>Mood Booster</h4>
+                    <p>Spotify . Playlist</p>
+                </div>
+
+                <div class="item">
+                    <img src="../../images/Ed.jpeg" />
+                    <div class="play">
+                        <span class="bi bi-play-fill"></span>
+                    </div>
+                    <h4>This is Ed Sheeran</h4>
+                    <p>Spotify . Playlist</p>
+                </div>
+
+                <div class="item">
+                    <img src="../../images/darshan.jpeg" />
+                    <div class="play">
+                        <span class="bi bi-play-fill"></span>
+                    </div>
+                    <h4>Peaceful Piano</h4>
+                    <p>Spotify . Playlist</p>
+                </div>
+
+                <div class="item">
+                    <img src="../../images/pawan.jpeg" />
+                    <div class="play">
+                        <span class="bi bi-play-fill"></span>
+                    </div>
+                    <h4>Mood Booster</h4>
+                    <p>Spotify . Playlist</p>
+                </div>
+
+                <div class="item">
+                    <img src="../../images/bts.jpeg" />
+                    <div class="play">
+                        <span class="bi bi-play-fill"></span>
+                    </div>
+                    <h4>This is BTS</h4>
+                    <p>Spotify . Playlist</p>
+                </div>
+
+                <div class="item">
+                    <img src="../../images/mix.jpeg.192x192.jpg" />
+                    <div class="play">
+                        <span class="bi bi-play-fill"></span>
+                    </div>
+                    <h4>Discover Weekly</h4>
+                    <p>Spotify . Playlist</p>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="preview">
+            <div class="song">
+                <h6>Preview of Spotify</h6>
+                <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
+            </div>
+            <button type="button">Sign Up Free</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
