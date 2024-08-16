@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            padding-top: 120px;
+            background-color: #A14FF2;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .card {
+           
+
+            width: 450px;
+            height: 400px;
+            background-color: white;
+            box-shadow: 2px 2px 2px rgb(121, 61, 61);
+            margin: 20px;
+            
+            
+        }
+        .title{
+            padding: 35px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .with{
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+        .bi-facebook{
+            background-color: rgb(66, 66, 255);
+            border-radius: 5px;
+            padding: 10px;
+            margin: 20px;
+            color: white;
+        }
+        .bi-google{
+            background-color: rgb(255, 21, 0);
+            border-radius: 5px;
+            padding: 10px;
+            margin: 20px;
+            color: white;
+        }
+        button{
+            margin-top: 40px;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            width: 65%;
+            border-radius: 10px;
+        }
+        .input{
+            margin-top: 20px;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="title">Sign In With</div>
+        <div class="with">
+            <div class="bi bi-facebook">&nbsp; Facebook</div>
+            <div class="bi bi-google">&nbsp; Google</div>
+        </div>
+        <div class="input">
+            Username
+            <input type="text">
+        </div>
+        <div class="input ps-3">
+            Pasword 
+            <input type="password">
+        </div>
+        <button>Sign In</button>
+        <p>Not a member? Sign up now</p>
+    </div>
+
+</body>
+
+</html>
