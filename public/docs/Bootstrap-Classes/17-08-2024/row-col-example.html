@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"> </script>
+    <style>
+        .range{
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex mt-4">
+        
+    <dl class="row w-25">
+        <h2>Product Details</h2>
+        <dt class="col-3">Name</dt>
+        <dd class="col-9">Motorola TV</dd>
+        <dt class="col-3">Price</dt>
+        <dd class="col-9">562825.00</dd>
+        <dt class="col-3">Discount</dt>
+        <dd class="col-9">10%</dd>
+        <dt class="col-3">Review</dt>
+        <dd class="col-9">
+            <span class="bi bi-star-fill text-warning"></span>
+            <span class="bi bi-star-fill text-warning"></span>           
+            <span class="bi bi-star-fill text-warning"></span>
+            <span class="bi bi-star-fill text-warning"></span>
+            <span class="bi bi-star-half text-warning"></span>
+        </dd>
+    </dl>
+    <div class="container-fluid bg-primary">
+        <h1>HDFC Personal Loan EMI Calculator</h1>
+        <div class="bg-light m-4 p-4 ">
+            <dl>
+                <div class="row">
+                    <div class="col">Amount you need <input type="text" size="15"></div>
+                    <div class="col">for <input type="text" size="5">&nbsp; &nbsp; years</div>
+                    <div class="col"> Interest rate <input type="text" size="8">&nbsp;&nbsp;%</div>
+                </div>
+                <div class="row my-4">
+                    <div class="col"><input type="range" class="range">
+                    <div class="d-flex justify-content-between">
+                        <span>₹50,000</span>
+                        <span>₹50,00,000</span>
+                    </div>
+                    </div>
+                    <div class="col"><input type="range" class="range">
+                        <div class="d-flex justify-content-between">
+                            <span>1 Year</span>
+                            <span>5 Year</span>
+                        </div>
+                    </div>
+                    <div class="col"><input type="range" class="range">
+                        <div class="d-flex justify-content-between">
+                            <span>10.58%</span>
+                            <span>19.57%</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col text-end">
+                        <button class="btn btn-warning">Calculate</button>
+                    </div>
+                    
+                </div>
+            </dl>
+        </div>
+        
+    </div>
+    
+    
+    </div>
+    
+    
+</body>
+</html>
