@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Group Classes</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"> </script>
+   
+</head>
+
+    <body class="bg-light">
+        <div class="container-fluid d-flex justify-content-center bg-light mt-4">
+            <form class="bg-light p-4 m-4 w-25 rounded border border-warning border-3">
+                <div class="bi bi-person-fill h4 text-center"> Login </div>
+                <div class="my-3">
+                    <label for="UserName" class="form-label">User Name</label>
+                    <div>
+                        <input type="text" class="form-control" name="UserName">
+                    </div>
+                </div>
+                <div class="my-3">
+                    <div class="d-flex justify-content-between">
+                        <label for="Password" class="form-label">Password</label>
+                        <label for=""><button class="btn btn-link">Forgot-password</button></label>
+                    </div>
+                    
+                    <div>
+                        <input type="password" class="form-control" name="Password">
+                    </div>
+                    
+                </div>
+               
+                <div class="my-3">
+                    <label class="form-label">Keep me signed in</label>
+                    <div class="form-switch">
+                        <input class="form-check-input" type="checkbox"><label class="form-check-label">Yes</label>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-warning w-100">Login</button>
+                </div>
+                <p class="my-3">By continuing, you agree to Amazon's Conditions of Use and <span class="text-danger">Privacy Notice.</span>
+
+                </p>
+            </form>
+        </div>
+        
+    </body>
+</html>
