@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offcanvas</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"> </script>
+
+</head>
+<body class="container-fluid">
+    <nav class="btn-toolbar p-2">
+        <div class="btn-group">
+            <button data-bs-toggle="offcanvas" data-bs-target="#menu" class="btn btn-light bi bi-justify">Amazon</button>
+        </div>
+        <div class="btn-group ps-5">
+            <button class="bi bi-house-door btn ps-5">Home</button>
+            <button class="bi bi-bell btn ps-5">Notification</button>
+            <button class="bi bi-cart btn ps-5">Shop</button>
+        </div>
+    </nav>
+    <div class="offcanvas offcanvas-start" id="menu">
+        <div class="offcanvas-header bg-dark">
+            <h3 class="text-white">Shopper.</h3>
+            <button class="btn btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul>
+                <li>Electronics</li>
+                <li>Footwear</li>
+                <li>Fashion</li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>
