@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"> </script>
+    <style>
+        .card{
+            background-color: white;
+            box-shadow: 2px 2px 2px gray;
+            padding: 8px;
+            margin: 10px;
+            height: 400px;
+        }
+        section{
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            margin-top: -340px;
+        }
+        .card-title{
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 23px;
+        }
+        .card-img{
+            width: 100%;
+            height: 250px;
+        }
+        .card-header{
+            height: 70px;
+        }
+        .card-body{
+            height: 300px;
+            font-family: Arial;
+            font-size: 14px;
+            border-bottom: 1px solid rgb(226, 224, 224);
+        }
+        .link{
+            color: rgb(15, 174, 172);
+            font-family: Arial;
+            font-size: 13px;
+            text-align:center;
+        }
+         .row{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            grid-gap: 10px;
+         }
+         .card-body-img{
+            width: 100%;
+         }
+         p{
+            margin-top: -1px;
+            font-size: 13px;
+         }
+         .carousel-control-next-icon{
+            margin-bottom: 320px;
+         }
+        .carousel-control-prev-icon{
+            margin-bottom: 320px;
+        }
+        .carousel-indicators{
+            margin-bottom: 350px;
+        }
+        ul{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="btn-toolbar p-2 bg-dark">
+        <div class="btn-group">
+            <button data-bs-toggle="offcanvas" data-bs-target="#menu" class="btn fw-bold bi bi-list text-white">All</button>
+        </div>
+        <div class="btn-group ps-5">
+            <div class="dropbottom">
+                <button data-bs-toggle="dropdown" class="dropdown-toggle btn btn-dark"> Fresh </button>
+                <ul class="dropdown-menu" data-bs-theme="dark">
+                    <li> <a class="dropdown-item"> <span class="dropdown-item-text">Fruits </span> </a> </li>
+                    <li> <a class="dropdown-item"> <span class="dropdown-item-text"> Flowers </span> </a> </li>
+                    <li> <a class="dropdown-item"> <span class="dropdown-item-text">Vegtables </span> </a> </li>
+                </ul>
+            </div>
+            <button class="btn  text-white">Amazon miniTV</button>
+            <button class="btn text-white">Sell</button>
+            <button class=" btn text-white">Best Sellers</button>
+            <button class=" btn text-white">Today's Deals</button>
+            <button class=" btn text-white">Mobiles</button>
+            <button class=" btn text-white">Customer Service</button>
+            <div class="dropbottom">
+                <button data-bs-toggle="dropdown" class="dropdown-toggle btn btn-dark"> Prime </button>
+                <ul class="dropdown-menu" data-bs-theme="dark">
+                    <li > <a class="dropdown-item"> <span class="dropdown-item-text"><span class="bi bi-bell pe-3"></span>For 1-month </span> </a> </li>
+                    <li > <a class="dropdown-item"> <span class="dropdown-item-text"><span class="bi bi-bell pe-3"></span>For 6-months </span> </a> </li>
+                    <li > <a class="dropdown-item"> <span class="dropdown-item-text"><span class="bi bi-bell pe-3"></span>For 12-months </span> </a> </li>
+
+                </ul>
+            </div>
+            <button class=" btn text-white">Electronics</button>
+            <button class=" btn text-white">Fashion</button>
+
+
+        </div>
+    </nav>
+    <div class="offcanvas offcanvas-start" id="menu">
+        <div class="offcanvas-header bg-dark">
+            <h4 class="text-white"> <span class="bi bi-person-circle pe-3"></span>Hello, sign in</h4>
+            <button class="btn btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul>
+                <h5><li>Trending</li></h5>
+                <li class="m-3">Best Sellers</li>
+                <li class="m-3">New Releases</li>
+                <li class="m-3">Movers and Shakers</li>
+            </ul>
+            <hr>
+            <ul>
+                <h5><li>Digital Content and Devices</li></h5>
+                <li class="m-3">Echo & Alexa</li>
+                <li class="m-3">Fire TV</li>
+                <li class="m-3">Kindle E-Readers & eBooks</li>
+                <li class="m-3">Audible Audiobooks</li>
+                <li class="m-3">Amazon Prime Video</li>
+                <li class="m-3">Amazon Prime Music</li>
+            </ul>
+            <hr>
+            <ul>
+                <h5><li>Shop by Category</li></h5>
+                <li class="m-3">Mobiles, Computers</li>
+                <li class="m-3">TV, Appliances, Electronics</li>
+                <li class="m-3">Men's Fashion</li>
+                <li class="m-3">Women's Fashion</li>
+                <li class="m-3">See all</li>
+            </ul>
+            
+        </div>
+    </div>
+    <div class="carousel slide" id="banners" data-bs-theme="dark"  data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="../../../images/Under1499.jpg" class=" w-100 d-block">
+            </div>
+            <div class="carousel-item" data-bs-interval="1000">
+                <img src="../../../images/Makeup.jpg" class=" w-100 d-block">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="../../../images/Kitchen.jpg" class=" w-100 d-block">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="../../../images/PC_Hero.jpg" class=" w-100 d-block">
+            </div>
+        </div>
+        <div class="button">
+            <button data-bs-slide="prev" data-bs-target="#banners" class="carousel-control-prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button data-bs-slide="next" data-bs-target="#banners" class="carousel-control-next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button class="active" data-bs-slide-to="0" data-bs-target="#banners"></button>
+                <button data-bs-slide-to="1" data-bs-target="#banners"></button>
+                <button data-bs-slide-to="2" data-bs-target="#banners"></button>
+                <button data-bs-slide-to="3" data-bs-target="#banners"></button>
+            </div>
+        </div>
+        
+        
+    </div>
+    <section>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Great Freedom Sale | Coming soon</div>
+            </div>
+            <div class="card-body">
+                <img src="../../../images/Freedom-sale.jpg" class="card-img">
+            </div>
+            <div class="card-footer">
+                <div class="link">Join Prime</div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Revamp your home in style</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="../../../images/Bedsheet.jpg" class="card-body-img">
+                        <p>Cushion covers, bedsheets & more</p>
+                    </div>
+                    <div>
+                        <img src="../../../images/vases.jpg" class="card-body-img">
+                        <p>Figurines, vases & more</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="../../../images/Home_storage.jpg" class="card-body-img">
+                        <p>Home storage</p>
+                    </div>
+                    <div>
+                        <img src="../../../images/Home_lighting.jpg" class="card-body-img">
+                        <p>Lighting solutions</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="link">Explore all</div>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Great Freedom Sale | Coming soon</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="../../../images/Appliances-2.jpg" class="card-body-img">
+                        <p>Refrigerators</p>
+                    </div>
+                    <div>
+                        <img src="../../../images/Appliances-3.jpg" class="card-body-img">
+                        <p>Microwaves</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="../../../images/Appliances.jpg" class="card-body-img">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div>
+                        <img src="../../../images/Appliances-4.jpg" class="card-body-img">
+                        <p>Washing machines</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="link">Explore all</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Great Freedom Sale | Coming soon</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="../../../images/boAt.jpg" class="card-body-img">
+                        <p>Starting ₹249 | boAt</p>
+                    </div>
+                    <div>
+                        <img src="../../../images/Boult.jpg" class="card-body-img">
+                        <p>Starting ₹549 | Boult</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="../../../images/Noise.jpg" class="card-body-img">
+                        <p>Starting ₹149 | Noise</p>
+                    </div>
+                    <div>
+                        <img src="../../../images/Zeb.jpg" class="card-body-img">
+                        <p>Starting ₹2549 | Zeb</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="link">Explore all</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
