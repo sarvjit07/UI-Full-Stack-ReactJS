@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"> </script>
+</head>
+<body class="container-fluid">
+     <h2>Warning</h2>
+     <div class="alert alert-success alert-dismissible w-50">
+        <h2 class="alert-title">Something went Wrong</h2>
+        <button class="btn btn-close" data-bs-dismiss="alert"></button>
+        <p>Please Complete Your Registration</p>
+        <a href="#" class="alert-link">Need Help</a>
+        <button data-bs-dismiss="alert" class="btn btn-warning">OK</button>
+     </div>
+     <div class="alert alert-danger alert-dismissible w-50">
+        <h4 class="alert-title">Please check the following errors in form</h4>
+        <button class="btn btn-close" data-bs-dismiss="alert"></button>
+
+        <ul>
+            <li>Name Required</li>
+            <li>Password min 5 to 10 chars only</li>
+            <li>Age min 15 required</li>
+        </ul>
+        <button class="btn btn-danger" data-bs-dismiss="alert">OK</button>
+     </div>
+</body>
+</html>
