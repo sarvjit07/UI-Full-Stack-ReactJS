@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Tabs</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"> </script>   
+</head>
+<body>
+    <div class="container d-flex justify-content-center mt-5">
+        <div class="col-md-6 border shadow">
+  
+            <ul class="nav nav-tabs nav-justified">
+                <li class="nav-item"><a href="#profile-tab" class="nav-link active" data-bs-toggle="pill">Profile</a></li>
+                <li class="nav-item"><a href="#setting-tab" class="nav-link" data-bs-toggle="pill">Setting</a></li>
+                <li class="nav-item"><a href="#contact-tab" class="nav-link" data-bs-toggle="pill">Contact us</a></li>
+                <li class="nav-item"><a href="#help-tab" class="nav-link" data-bs-toggle="pill">Help</a></li>
+                </ul>
+    <div class="tab-content">
+        <div class="tab-pane active px-5" id="profile-tab">
+            <img src="../../../images/darshan-2.jpeg" width="150px" height="150px" class="rounded-circle   mx-auto d-flex my-3">
+            <h2 class="text-center my-3">Darshan Ravel</h2>
+            <div class="mx-auto my-3 d-flex justify-content-center">
+                <button class="btn btn-success btn-sm">View Profile <i class="bi bi-person"></i></button>
+                <button class="btn btn-info mx-3 btn-sm">Edit Profile <i class="bi bi-pen"></i></button>
+                <button class="btn btn-primary btn-sm">Message <i class="bi bi-messenger"></i></button>
+            </div>
+         <hr>
+         <h4>Information</h4>
+         <div class="form-group">
+             <h6><i class="bi bi-briefcase"></i> Work Place</h6>
+             <p>Flim City Hyderabad</p>
+         </div>
+         
+         <div class="form-group">
+             <h6><i class="bi bi-mortarboard"></i> Education</h6>
+             <p>Bachelor, Mumbai</p>
+         </div>
+         <div class="form-group">
+             <h6><i class="bi bi-geo"></i> Birth Place</h6>
+             <p>Hyderabad , India</p>
+         </div>
+            </div>
+
+            <div class="tab-pane fade p-5" id="setting-tab">
+ 
+                <h4 class="text-center">Account Setting</h4>
+                   <h6>Name: </h6>
+                   <p>Darsham Ravel </p>
+                   <h6>Email: </h6>
+                   <p>darshanravel98@gmail.com</p>
+                   <h6>Password: </h6>
+                   <p>**********</p>
+                   <h6>Phone: </h6>
+                   <p>785454093 <a href="#" class="float-right">Edit/Change</a></p>
+                   <h6>Gender: </h6>
+                   <p>Male</p>	
+               
+               </div>
+               
+               
+               <div class="tab-pane fade px-5 my-4" id="contact-tab">
+               <h3 class="text-center"><span class="bi bi-person"></span> Sign up</h3>
+               <form class="w-75 mx-auto">
+                   <div class="col-md-12 my-4">
+                       <label class="form-label">Email</label>
+                       <input type="email" placeholder="Enter Your Email-id" class="form-control" required="">
+                   </div>
+                   <div class="col-md-12">
+                       <label class="form-label">Password</label>
+                       <input type="Password" class="form-control" required="">
+                   </div>
+                   <div class="col-md-12">
+                       <a href="#" class="float-right mb-3">Forget Password</a>
+                   </div>
+                   <div class="col-12">
+                       <button type="submit" class="btn btn-primary btn-sm form-control my-3">Sign in</button>
+                       
+                   </div>
+                   
+               </form>
+                   
+               </div>
+                
+               
+               <div class="tab-pane m-4" id="help-tab">
+                   <h5 class="text-justify">Help me</h5>
+                   <h6 class="text-justify">In India, you can call 112 for emergency assistance from the police, fire and rescue, health, and other services. You can also activate a panic call by pressing the power button on your smartphone three times quickly, or by long pressing the "5" or "9" key on a feature phone. When you call 112, you are redirected to the emergency number 100, which can save time by avoiding dialing multiple numbers. 
+
+                   </h6>
+                   <button class="mt-3 btn btn-danger bi bi-telephone"> Call Now</button>
+               </div>
+               
+               
+               
+               
+               
+                   </div>
+               
+               </div>
+               </div>
+</body>
+</html>
