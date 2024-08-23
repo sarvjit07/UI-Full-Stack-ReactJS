@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+
+    <style>
+      .product {
+        display: grid;
+        grid-template-columns: 3fr 6fr 3fr;
+        font-family: Arial;
+        padding: 5px;
+        margin-top: 50px;
+      }
+      .title {
+        font-size: 23px;
+        font-family: Arial;
+        font-weight: bold;
+        padding-bottom: 10px;
+        /* margin-bottom: 10px; */
+      }
+      .rating {
+        background-color: green;
+        color: white;
+        border-radius: 5px;
+        padding: 3px;
+        margin-right: 20px;
+      }
+      .review {
+        font-size: 18px;
+        font-family: Arial;
+        font-weight: bold;
+        color: gray;
+        /* margin-left: 10px; */
+      }
+      .price {
+        font-size: 30px;
+        font-family: Arial;
+        font-weight: bold;
+        /* margin-bottom:5px; */
+      }
+      .discount {
+        color: gray;
+        font-size: 14px;
+      }
+      ul {
+        margin-left: -30px;
+        margin-top: 30px;
+      }
+      li {
+        margin-top: 10px;
+      }
+      .delivery {
+        margin-top: 12px;
+        font-size: 12px;
+      }
+      .save {
+        font-size: 12px;
+        margin-top: 12px;
+        font-weight: bold;
+      }
+      .left {
+        font-size: 12px;
+        margin-top: 5px;
+        color: rgb(194, 23, 154);
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="p-3">Breadcrumb Example <span class="bi bi-arrow-down text-danger"></span></h2>
+    
+    <ul class="breadcrumb ms-3" style="--bs-breadcrumb-divider: '>'">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item">Mobiles & Accessories</li>
+        <li class="breadcrumb-item">Mobiles</li>
+        <li class="breadcrumb-item">Apple Mobiles</li>
+        <li class="breadcrumb-item">Apple iPhone</li>
+    </ul>
+    <div class="product">
+      <div>
+        <img src="../../../images/iphone-blue.jpg" />
+      </div>
+      <div>
+        <div class="title">Apple iPhone 15 (Blue, 128 GB)</div>
+        <div>
+          <span class="rating">4.6 <span class="bi bi-star-fill"></span></span>
+          <span class="review">44,023 Ratings & 2,370</span>
+        </div>
+        <div>
+          <ul>
+            <li>128 GB ROM</li>
+            <li>15.49 cm (6.1 inch) Super Retina XDR Display</li>
+            <li>48MP + 12MP | 12MP Front Camera</li>
+            <li>A16 Bionic Chip, 6 Core Processor Processor</li>
+            <li>
+              1 Year Warranty for Phone and 6 Months Warranty for In-Box
+              Accessories
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="price">&#8377; 68,999</div>
+        <div class="discount">
+          <strike>&#8377;79,999</strike
+          ><font color="green"><b> &nbsp;13% off </b></font>
+        </div>
+        <div class="delivery">Free delivery</div>
+        <div class="save">
+          <font color="green">Save extra with combo offers</font>
+        </div>
+        <div class="left">Only 1 left</div>
+      </div>
+    </div>
+
+    <div class="product">
+      <div>
+        <img src="../../../images/iphone-black.jpg" alt="" />
+      </div>
+      <div>
+        <div class="title">Apple iPhone 15 (Black, 128 GB)</div>
+        <div>
+          <span class="rating">4.6 <span class="bi bi-star-fill"></span></span
+          ><span class="review">44,023 Ratings & 2,370</span>
+        </div>
+        <div>
+          <ul>
+            <li>128 GB ROM</li>
+            <li>15.49 cm (6.1 inch) Super Retina XDR Display</li>
+            <li>48MP + 12MP | 12MP Front Camera</li>
+            <li>A16 Bionic Chip, 6 Core Processor Processor</li>
+            <li>
+              1 Year Warranty for Phone and 6 Months Warranty for In-Box
+              Accessories
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="price">&#8377; 68,999</div>
+        <div class="discount">
+          <strike>&#8377;79,999</strike
+          ><font color="green"><b> &nbsp;13% off </b></font>
+        </div>
+        <div class="delivery">Free delivery</div>
+        <div class="save">
+          <font color="green">Save extra with combo offers</font>
+        </div>
+        <div class="left">Only 1 left</div>
+      </div>
+    </div>
+  </body>
+</html>
