@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        th {
+            font-size: 12px;
+            font-weight: lighter;
+            text-align: center;
+    
+        }
+
+        .dropdown-toggle {
+            cursor: pointer;
+        }
+
+        thead,
+        tbody,
+        tfoot,
+        tr,
+        td,
+        th {
+            border: none;
+        }
+        
+    </style>
+</head>
+
+<body style="font-family: for;" class="container-fluid">
+    <header class="sticky-top d-flex bg-dark justify-content-between text-white" style="font-family: for;">
+        <h4 class="m-3 fw-bold">Forbes</h4>
+        <button class="m-3 btn btn-dark fw-bold text-white bi-search"></button>
+    </header>
+    <article class="mt-2">
+        <h3 class="bg-warning text-dark p-3 text-center">THE REAL-TIME BILLIONAIRES LIST</h3>
+    </article>
+    <ul class="d-flex justify-content-around" style="list-style: none;">
+        <li>2024 List</li>
+        <li>Request Spreadsheet</li>
+        <li>Reprints</li>
+    </ul>
+    <nav class="navbar navbar-expand-lg">
+        <div class="d-flex justify-content-between input-group container-fluid">
+            <button class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse navbar-nav" id="menu">
+                <div>
+                    <p>Filter list by:</p>
+                </div>
+                <div>
+                    <div class="ps-2 pb-3">
+                        <span>OLDEST</span>
+                        <span class="ps-3">YOUNGEST</span>
+                        <span class="ps-3">WOMEN</span>
+                        <span class="ps-3">
+                            <span data-bs-toggle="dropdown" class="dropdown-toggle">INDUSTRY</span>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item active"> <span class="dropdown-item-text">ALL</span> </a>
+                                </li>
+                                <li><a class="dropdown-item"> <span class="dropdown-item-text">AUTOMOTIVE</span> </a>
+                                </li>
+                                <li class="dropdown-item"> <a> <span class="dropdown-item-text">CONSTRUCTION &
+                                            ENGINEERING</span> </a></li>
+                            </ul>
+                        </span>
+                        <span class="ps-3">
+                            <span data-bs-toggle="dropdown" class="dropdown-toggle">COUNTRY/TERRITORY</span>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"> <span class="dropdown-item-text">ALL</span> </a></li>
+                                <li><a class="dropdown-item active"> <span class="dropdown-item-text">USA</span> </a>
+                                </li>
+                                <li class="dropdown-item"> <a> <span class="dropdown-item-text">INDIA</span> </a></li>
+                            </ul>
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <div class="input-group ps-5 pb-3">
+                        <input type="text" placeholder="Search name,country & more..." class="form-control">
+                        <button class="bi bi-search btn btn-warning"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="table-responsive" style="height: 450px;">
+        <table class="table table-hover table-striped caption-top text-center">
+            <thead>
+                <tr style="position: sticky; top: 0;">
+                    <th width="10"></th>
+                    <th width="100">RANK</th>
+                    <th width="180">NAME</th>
+                    <th>NET WORTH</th>
+                    <th>AGE</th>
+                    <th>SOURCE</th>
+                    <th>COUNTRY/TERRITORY</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="align-middle">
+                    <td class="align-middle">
+                        <img src="../../../images/elon.jpg" width="55" class="img-fluid">
+                    </td>
+                    <td class="align-middle">1</td>
+                    <td class="align-middle">Elon Musk</td>
+                    <td class="align-middle">$241.8 B</td>
+                    <td class="align-middle">53</td>
+                    <td class="align-middle">Tesla, SpaceX</td>
+                    <td class="align-middle">United States</td>
+                </tr>
+                <tr class="align-middle">
+                    <td class="align-middle">
+                        <img src="../../../images/jeff.jpg" width="55" class="img-fluid">
+                    </td>
+                    <td class="align-middle">2</td>
+                    <td class="align-middle">Jeff Bezos</td>
+                    <td class="align-middle">$194.8 B</td>
+                    <td class="align-middle">60</td>
+                    <td class="align-middle">Amazon</td>
+                    <td class="align-middle">United States</td>
+                </tr>
+                <tr class="align-middle">
+                    <td class="align-middle">
+                        <img src="../../../images/bernard.jpg" width="55" class="img-fluid">
+                    </td>
+                    <td class="align-middle">3</td>
+                    <td class="align-middle">Bernard Arnault & family</td>
+                    <td class="align-middle">$191.7 B</td>
+                    <td class="align-middle">75</td>
+                    <td class="align-middle">LVMH</td>
+                    <td class="align-middle">France</td>
+                </tr>
+                <tr class="align-middle">
+                    <td class="align-middle">
+                        <img src="../../../images/mark.jpg" width="55" class="img-fluid">
+                    </td>
+                    <td class="align-middle">4</td>
+                    <td class="align-middle">Mark Zuckerberg</td>
+                    <td class="align-middle">$184.2 B</td>
+                    <td class="align-middle">40</td>
+                    <td class="align-middle">Facebook</td>
+                    <td class="align-middle">United States</td>
+                </tr>
+                <tr class="align-middle">
+                    <td class="align-middle">
+                        <img src="../../../images/larray.jpg" width="55" class="img-fluid">
+                    </td>
+                    <td class="align-middle">5</td>
+                    <td class="align-middle">Larry Ellison</td>
+                    <td class="align-middle">$170.2 B</td>
+                    <td class="align-middle">80</td>
+                    <td class="align-middle">Oracle</td>
+                    <td class="align-middle">United States</td>
+                </tr>
+                <tr class="align-middle">
+                    <td class="align-middle">
+                        <img src="../../../images/buffett.jpg" width="55" class="img-fluid">
+                    </td>
+                    <td class="align-middle">6</td>
+                    <td class="align-middle">Warren Buffett</td>
+                    <td class="align-middle">$141.3 B</td>
+                    <td class="align-middle">93</td>
+                    <td class="align-middle">Berkshire Hathaway</td>
+                    <td class="align-middle">United States</td>
+                </tr>
+                <tr class="align-middle">
+                    <td class="align-middle">
+                        <img src="../../../images/larry.jpg" width="55" class="img-fluid">
+                    </td>
+                    <td class="align-middle">7</td>
+                    <td class="align-middle">Larry Page</td>
+                    <td class="align-middle">$136.4 B</td>
+                    <td class="align-middle">51</td>
+                    <td class="align-middle">Google</td>
+                    <td class="align-middle">United States</td>
+                </tr>
+                <tr class="align-middle">
+                    <td class="align-middle">
+                        <img src="../../../images/bill-gates.jpg" width="55" class="img-fluid">
+                    </td>
+                    <td class="align-middle">8</td>
+                    <td class="align-middle">Bill Gates</td>
+                    <td class="align-middle">$132.9 B</td>
+                    <td class="align-middle">68</td>
+                    <td class="align-middle">Microsoft</td>
+                    <td class="align-middle">United States</td>
+                </tr>
+                <tr class="align-middle">
+                    <td class="align-middle">
+                        <img src="../../../images/amernio.jpg" width="55" class="img-fluid">
+                    </td>
+                    <td class="align-middle">9</td>
+                    <td class="align-middle">Sergey Brin</td>
+                    <td class="align-middle">$132.8 B</td>
+                    <td class="align-middle">50</td>
+                    <td class="align-middle">Google</td>
+                    <td class="align-middle">United States</td>
+                </tr>
+                <tr class="align-middle">
+                    <td class="align-middle">
+                        <img src="../../../images/ambani.jpg" width="55">
+                    </td>
+                    <td class="align-middle">10</td>
+                    <td class="align-middle">Mukesh Ambani</td>
+                    <td class="align-middle">$100.5 B</td>
+                    <td class="align-middle">67</td>
+                    <td class="align-middle">Diversified</td>
+                    <td class="align-middle">India</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <tfoot>
+        <article class="mt-5">
+            <h3 class="bg-warning text-dark p-3 text-center">METHODOLOGY</3>
+        </article>
+        <p>Forbes' Real-Time Billionaires rankings tracks the daily ups and downs of the world’s richest people. The
+            wealth-tracking platform provides ongoing updates on the net worth and ranking of each individual confirmed
+            by Forbes to be a billionaire. The value of individuals’ public holdings are updated every 5 minutes when
+            respective stock markets are open (there will be a 15-minute delay for stock prices). Individuals whose
+            fortunes are significantly tied to private companies will have their net worths updated once a day. In cases
+            where an individual owns a stake in a private company that accounts for 20% or more of his or her net worth,
+            the value of the company will be adjusted according to an industry- or region-specific market index provided
+            by our partners at FactSet Research Systems when available. A rotating cast of the five biggest winners and
+            losers throughout the day is featured at the top of the page, followed by the complete list of billionaires
+            ranked in order of net worth.</p>
+    </tfoot>
+</body>
+
+</html>
