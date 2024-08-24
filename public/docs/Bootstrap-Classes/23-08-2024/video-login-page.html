@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom CSS */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .video-background {
+    position: absolute;
+    top: 34px;
+    left: 109px;
+    width: 35%;
+    height: 91%;
+    object-fit: cover;
+}
+.login-container {
+    width: 54%;
+    margin-left: 46%;
+    height: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+        .login-form {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .social-login img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+        .footer {
+    position: fixed;
+    bottom: 0;
+    width: 75%;
+    margin-left: 46%;
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #dee2e6;
+}
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <video class="video-background" autoplay muted loop>
+        <source src="../../../videos/video-login-page.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Login Container -->
+    <div class="login-container">
+        <div class="login-form">
+            <h2 class="text-center mb-4">Login</h2>
+            <form>
+                <div class="social-login text-center mb-3">
+                    <span class="me-4">Login with</span>
+                    <button type="button" class="btn btn-light">
+                        <img src="../../../images/google.svg" alt="Google"> 
+                    </button>
+                    <button type="button" class="btn btn-light mx-2">
+                        <img src="../../../images/facebook.svg" alt="Facebook"> 
+                    </button>
+                    <button type="button" class="btn btn-light">
+                        <img src="../../../images/twitter.svg" alt="Twitter">
+                    </button>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+                <button type="submit" class="btn btn-danger w-100 mt-3">Sign up</button>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
