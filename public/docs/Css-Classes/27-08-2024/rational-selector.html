@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+/* 
+- Child selector can select element at any level of hierarchy in page.
+- Direct Child selector can select only direct child elements.  " > " */
+/* 
+- Adjacent Selector can select the next occurrence element.  [ + ]
+- General Sibling selects all elements that occur after the specified. [~] */
+        header>span{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        nav+span{
+            color: red;
+        }
+        nav span{
+            color: green;
+        }
+        header~span{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span>Amazon</span>
+        <nav>
+            <span>Home</span>
+            <span>About</span>
+            <span>Contact</span>
+        </nav>
+        <h5>Hello</h5>
+        <span>Signout</span>
+    </header>
+    <span>Page1</span>
+    <span>Page2</span>
+</body>
+</html>
