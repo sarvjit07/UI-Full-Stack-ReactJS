@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p[class|="Effect"]{
+            color: red;
+        }
+        
+        /*
+
+         p[class~="Effect"]{
+            color: red;
+        }
+        p[class^="Effect"]{
+            color: red;
+        }
+        p[class$="Effect"]{
+            color: red;
+        }
+        p[class="Effect"]{
+            color: red;
+        }
+
+         */
+    </style>
+</head>
+<body>
+    <p class="Effect">Para-1</p>
+    <p class="ParaEffect">Para-2</p>
+    <p class="EffectPara">Para-3</p>
+    <p class="TextEffectPara">Para-4</p>
+    <p class="Text-Effect">Para-5</p>
+    <p class="Text Effect">Para-6</p>
+    <p class="Effect Text">Para-7</p>
+    <p class="Text Effect Para">Para-8</p>
+    <p class="Effect-Text">Para-9</p>
+</body>
+</html>
