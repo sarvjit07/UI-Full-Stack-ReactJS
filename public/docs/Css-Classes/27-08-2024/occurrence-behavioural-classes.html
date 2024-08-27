@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+            display: flex;
+        }
+        li::before{
+            content: " > ";
+            color:gray;
+            font-weight: bold;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        li:first-child::before{
+            content: "";
+        }
+        p::selection{
+            background-color: yellow;
+            text-decoration: underline 3px double;
+            font-size:50px; /* Does not work because some rule are follow by them */
+        }
+        p::first-line{
+            color: blue;
+        }
+        p::first-letter{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>Electronics</li>
+        <li>Mobiles</li>
+        <li>Iphone</li>
+        <li>iphone-14 Pro Max</li>
+    </ul>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fugiat nobis autem exercitationem eos doloribus dicta blanditiis repellendus, velit odit. Autem molestiae dolorum minima rem expedita impedit velit laborum. Dolore.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi ducimus aperiam placeat, in officiis eligendi. Voluptatum deserunt eligendi quo neque nesciunt cumque voluptatibus dolorum illo, dicta veniam, doloribus possimus perspiciatis?
+        </p>
+     
+</body>
+</html>
