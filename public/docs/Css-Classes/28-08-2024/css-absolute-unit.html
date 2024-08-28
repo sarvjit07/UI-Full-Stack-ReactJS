@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Absolute Units Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            border: 1px solid #333;
+            padding: 20px;
+        }
+
+        .absolute-unit-examples {
+            margin-top: 20px;
+        }
+
+        .absolute-unit-examples div {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #aaa;
+            background-color: #f4f4f4;
+        }
+
+        .example-cm {
+            width: 5cm; /* 5 centimeters wide */
+            height: 2cm; /* 2 centimeters high */
+            color: darkblue;
+            line-height: 2cm;
+            text-align: center;
+        }
+
+        .example-mm {
+            width: 50mm; /* 50 millimeters wide */
+            height: 20mm; /* 20 millimeters high */
+            color: darkgreen;
+            line-height: 20mm;
+            text-align: center;
+        }
+
+        .example-q {
+            width: 40q; /* 40 quarter-millimeters wide */
+            height: 20q; /* 20 quarter-millimeters high */
+            color: darkred;
+            line-height: 20q;
+            text-align: center;
+        }
+
+        .example-in {
+            margin-top: 70px;
+            width: 2in; /* 2 inches wide */
+            height: 1in; /* 1 inch high */
+            color: darkorange;
+            line-height: 1in;
+            text-align: center;
+        }
+
+        .example-pc {
+            width: 6pc; /* 6 picas wide */
+            height: 3pc; /* 3 picas high */
+            color: purple;
+            line-height: 3pc;
+            text-align: center;
+        }
+
+        .example-pt {
+            margin-top: 50px;
+            font-size: 18pt; /* 18 points */
+            color: teal;
+        }
+
+        .example-px {
+            font-size: 24px; /* 24 pixels */
+            color: navy;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Absolute Units Example</h1>
+        <p>This example showcases various absolute units in CSS including <code>cm</code>, <code>mm</code>, <code>q</code>, <code>in</code>, <code>pc</code>, <code>pt</code>, and <code>px</code>.</p>
+        
+        <div class="absolute-unit-examples">
+            <div class="example-cm">5cm x 2cm Box</div>
+            <div class="example-mm">50mm x 20mm Box</div>
+            <div class="example-q">40q x 20q Box</div>
+            <div class="example-in">2in x 1in Box</div>
+            <div class="example-pc">6pc x 3pc Box</div>
+            <div class="example-pt">This text is 18pt (Points).</div>
+            <div class="example-px">This text is 24px (Pixels).</div>
+        </div>
+    </div>
+</body>
+</html>
