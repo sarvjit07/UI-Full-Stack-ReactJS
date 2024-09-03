@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            overflow: hidden;
+        }
+        @keyframes Carousel
+        {
+            from {
+                transform: translateX(110%);
+            }
+            50% {
+                transform: translateX(0%);
+            }
+            to {
+                transform: translateX(-110%);
+            }
+        }
+        img {
+            animation-name: Carousel;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+    </style>
+</head>
+<body>
+    <img src="../../../images/flipkart-banner.png" width="100%">
+</body>
+</html>

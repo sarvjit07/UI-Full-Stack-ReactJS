@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes Zoom {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .title {
+            font-size: 30px;
+            display: flex;
+            justify-content: space-around;
+            width: 1000px;
+        }
+        .icon-container {
+            width: 30px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        .bi-heart-pulse {
+            animation: Zoom 2s infinite linear;
+            font-size: 30px;
+            color: red;
+        }
+    </style>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <div>
+         <div class="title">
+            <div>M</div>
+            <div>E</div>
+            <div>D</div>
+            <div>I</div>
+            <div>C</div>
+            <div class="icon-container">
+                <i class="bi bi-heart-pulse"></i>
+            </div>
+            <div>V</div>
+            <div>E</div>
+            <div>R</div>
+         </div>
+    </div>
+</body>
+</html>
