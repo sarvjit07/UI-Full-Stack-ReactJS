@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 27px;
+        }
+        .navbar-nav .nav-link:hover{
+          color: rgb(255, 84, 84);
+        }
+
+        .navbar-nav .nav-link {
+            margin-right: 20px;
+            font-weight: bold;
+            color: rgb(94, 92, 92);
+        }
+
+        .icons .nav-link {
+            font-size: 1.2rem;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+
+        .badge {
+            position: absolute;
+            top: -0.5px;
+            left: 35px;
+            height:21px;
+            width: 21px;
+            border-radius: 21px;
+            font-size: 0.75rem;
+            background-color: red;
+        }
+
+        .nav-item.position-relative {
+            position: relative;
+        }
+
+        @media (max-width: 767.98px) {
+            .navbar-nav .nav-link {
+                margin-right: 0;
+                margin-bottom: 10px;
+              
+            }
+            .icons {
+              display: grid;
+              
+            }
+            .badge{
+              left: 27px;
+            }
+           
+        }
+        article {
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: black;
+        color: white;
+        padding: 14px;
+        text-align: center;
+        margin-top: 13px;
+        font-weight: bold;
+      }
+      .bi-lightning-fill {
+        color: rgb(235, 160, 23);
+
+      }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Shopper.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Catalog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Docs</a>
+                </li>
+            </ul>
+             <ul class="navbar-nav icons" style=" display: grid; grid-template-columns: 3fr 3fr 3fr 3fr;">
+              <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="bi bi-search"></i></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="bi bi-person"></i></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="bi bi-heart"></i></a>
+              </li>
+              <li class="nav-item position-relative">
+                  <a class="nav-link" href="#">
+                      <i class="bi bi-cart"></i>
+                      <span class="badge">2</span>
+                  </a>
+              </li>
+          </ul>
+           
+        </div>
+    </div>
+</nav>
+<section>
+  <article>
+    <span class="bi bi-lightning-fill"></span>
+    <span>HAPPY HOLIDAY DEAL ON EVERYTHING</span>
+    <span class="bi bi-lightning-fill"></span>
+  </article>
+  <main>
+  </main>
+</section>
+</body>
+</html>
