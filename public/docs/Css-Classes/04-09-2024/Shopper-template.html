@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <style>
+   
         .navbar-brand {
             font-weight: bold;
             font-size: 27px;
@@ -60,8 +61,23 @@
             .badge{
               left: 27px;
             }
-           
+            .dropdown-item{
+                margin-left: -21px;
+            }
+            .dropdown-option{
+                display: grid !important;
+                grid-template-columns: 6fr 6fr !important;
+                
+                margin-bottom: 7px;
+            }
+          
         }
+        @media (max-width: 767.98px) {
+            .image{
+            display: none !important;
+           }
+        }
+
         article {
         font-size: 13px;
         font-family: Arial, Helvetica, sans-serif;
@@ -86,6 +102,45 @@
 .navbar-toggler{
     border: none;
 }
+.dropdown-item{
+    font-family: Sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+}
+.image{
+    background-image: url("../../../images/women-2.jpg");
+    background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 52px;
+        opacity: 0.8;
+        height: 280px;
+        width: 262px;
+}
+.shop-btn {
+        background-color: white;
+        font-size: 18px;
+        box-shadow: 2px 2px 2px gray;
+        border: 1px solid black;
+        width: 114px;
+        height: 36px;
+        background-color: white;
+        padding: 5px;
+        text-align: center;
+      }
+      .section{
+        margin-bottom: -17px;
+      }
+      .hover:hover{
+        text-decoration: underline;
+        color: red;
+        cursor: pointer;
+      }
+      .fashion{
+        margin-bottom: 20px;
+      }
     </style>
 </head>
 <body>
@@ -98,20 +153,122 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                <li class="nav-item dropdown">
+                    <a data-bs-toggle="dropdown" class="nav-link" >Home</a>
+                    <ul class="dropdown-menu" data-bs-theme="white" style="border: none;"; >
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text">Default </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text">Classic </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text">Fashion </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text">Boxed </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text">Simple </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text">Asymmetric </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text">Sidenav </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text">Landing </span> </a> </li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Catalog</a>
+                <li class="nav-item dropdown ">
+                    <a data-bs-toggle="dropdown" class="nav-link" >Catalog</a>
+                    <ul class="dropdown-menu " data-bs-theme="white" style="border: none;">
+                        <div class="section d-flex">
+                            <div class="hover ms-3 me-3">Women</div>
+                            <div class="hover me-3">Men</div>
+                            <div class="hover me-3">Kid</div>
+                        </div>
+                        <hr>
+                        <div class="dropdown-option" style="display: grid; grid-template-columns:1.5fr 1.5fr 1.5fr 1.5fr 6fr; ">
+                            <div class="fashion">
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text" style="font-weight: bold;">Clothing</span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">All Clothing</span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Blouses & Shirts</span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Coats & Jackets </span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Dresses </span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Hoodies & Sweats </span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Denim </span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Jeans </span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Jumpers & Cardigans </span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Leggings</span> </a> </li>
+                            </div>
+                            <div class="fashion">
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text" style="font-weight: bold;">Shoes & Boots</span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">All Shoes & Boots </span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Branded Shoes </span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Boots </span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Heels </span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Trainers </span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Sandals </span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Shoes </span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Wide Fit Shoes </span> </a> </li>
+                            </div>
+                            <div class="fashion">
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text" style="font-weight: bold;">Bags & Accessories</span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">All Bags & Accessories</span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Accessories</span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Bags & Purses</span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Luggage</span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Belts</span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Hats</span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Hair Accessories</span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Jewellery</span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Travel Accessories</span> </a> </li>
+
+                            </div>
+                            <div class="fashion">
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text" style="font-weight: bold;">Collections</span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">All Collections</span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Occasionwear</span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Going Out</span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Workwear</span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Holiday Shop</span> </a> </li>
+                                <li> <a class="dropdown-item"> <span class="dropdown-item-text">Jean Fit Guide</span> </a> </li>
+                            </div>
+                            <div class="image">
+                                <div class="shop-btn">
+                                  <span>Shop Now</span><span class="bi bi-arrow-right"></span>
+                                </div>
+                            </div>
+                        </div>
+ 
+
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Shop</a>
+                <li class="nav-item dropdown">
+                    <a data-bs-toggle="dropdown" class="nav-link" >Shop</a>
+                    <ul class="dropdown-menu" data-bs-theme="white" style="border: none;";>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Default </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Classic </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Fashion </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Boxed </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Simple </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Asymmetric </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Sidenav </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Landing </span> </a> </li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pages</a>
+                <li class="nav-item dropdown">
+                    <a data-bs-toggle="dropdown" class="nav-link" >Pages</a>
+                    <ul class="dropdown-menu" data-bs-theme="white" style="border: none;";>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Default </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Classic </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Fashion </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Boxed </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Simple </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Asymmetric </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Sidenav </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Landing </span> </a> </li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
+                <li class="nav-item dropdown">
+                    <a data-bs-toggle="dropdown" class="nav-link" >Blog</a>
+                    <ul class="dropdown-menu" data-bs-theme="white" style="border: none;";>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Default </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Classic </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Fashion </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Boxed </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Simple </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Asymmetric </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Sidenav </span> </a> </li>
+                        <li> <a class="dropdown-item"> <span class="dropdown-item-text ms-2">Landing </span> </a> </li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Docs</a>
