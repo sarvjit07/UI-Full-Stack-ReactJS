@@ -1,0 +1,534 @@
+@media (max-width: 767px) {
+    .carousel-image{
+        height: 200px;
+    }
+    .small-nav{
+        margin-left: 15px;
+    }
+}
+
+.circle-btn {
+    width: 15px !important; 
+    height: 15px !important ; 
+    border-radius: 50% !important;
+    background-color: #ccc !important; 
+    border: none;  
+}
+
+.carousel-control-next-icon{
+    color: white !important;
+}
+.small-menu-row{
+    background-color: #00061D;
+}
+.small-nav a {
+    color: white;
+    opacity: 0.7;
+    font-size: 90%;
+    text-decoration: none;
+}
+
+.dropdown-toggle{
+    margin-left:4px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer {
+    background-color: #0d1725;
+    color: #fff;
+    padding: 40px 0;
+  }
+
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  .footer .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4747;
+  }
+
+  .footer p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #b3b3b3;
+  }
+
+  .social-icons a {
+    margin-right: 15px;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .store-icons img {
+    height: 40px;
+    margin-right: 15px;
+  }
+
+  .footer .company,
+  .footer .quick-access,
+  .footer .contact-info {
+    margin-bottom: 20px;
+  }
+
+  .footer .company a,
+  .footer .quick-access a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .contact-info p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  @media (max-width: 767.98px) {
+    .footer {
+      text-align: center;
+    }
+
+    .footer .social-icons,
+    .footer .store-icons {
+      justify-content: center;
+    }
+
+    .footer .company a,
+    .footer .quick-access a {
+      text-align: center;
+    }
+  }
+ 
+  /* Student Card */
+
+  .student {
+    padding: 20px 0;
+    background-image: url("../Images/white-pattern-bg.jpg");
+  }
+
+  .student .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+
+  .student .card img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+
+  .student h5 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .student p {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .student .linkedin-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: #0077b5;
+  }
+
+  .student .company {
+    font-size: 14px;
+    color: #999;
+  }
+
+  .student .placed-students-title {
+    font-weight: bold;
+    font-size: 26px;
+    margin-top: 50px;
+  }
+
+  .student .carousel-control-prev-icon,
+  .student .carousel-control-next-icon {
+    background-color: #000;
+  }
+
+  @media (max-width: 768px) {
+    .student .carousel-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .student .card {
+      margin-bottom: 20px;
+    }
+  }
+
+
+
+/*section-1 */
+
+.section1 {
+    padding: 20px 0;
+}
+
+/* Zoom on hover */
+.zoom-image {
+    transition: transform 0.3s ease-in-out;
+}
+
+.zoom-image:hover {
+    transform: scale(1.1);
+}
+
+/* Custom table styling */
+.section1-table {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.section1-table th, .section1-table td {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Image */
+.section1-image img {
+    width: 100%;
+    margin-top: 20px;
+    max-width: 350px;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section1-image {
+        margin-top: 20px;
+    }
+}
+
+.section2{
+    padding: 20px 0;
+    background-image: url(../Images/black-pattern-bg.jpg);
+}
+
+
+
+/* section3 */
+
+
+.section3 {
+    background-color: #c1bff4;
+    padding: 40px 0;
+    color: #333;
+}
+
+.section3 h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section3 p {
+    font-size: 14px;
+    color: #333;
+}
+
+.section3 .icon-box {
+    text-align: center;
+    padding: 15px;
+}
+
+.section3 .icon-box i {
+    font-size: 30px;
+    color: #333;
+}
+
+.section3 .section3-links {
+    list-style: none;
+    padding: 0;
+}
+
+.section3 .section3-links li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.section3 .section3-links li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.section3 .section3-links li a:hover {
+    color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .section3 .icon-box {
+        margin-bottom: 30px;
+    }
+}
+
+
+/* section4 */
+
+.section4 {
+    padding: 40px 0;
+    background-color: #f8f9fa;
+}
+
+/* Number circle styling */
+.circle-number {
+    display: inline-block;
+    border-radius: 28px;
+    background-color: #FFC107;
+    color: #333;
+    font-size: 24px;
+    padding: 10px 15px;
+    text-align: center;
+    line-height: 1;
+    height: 52px;
+    width: 100px;
+}
+.circle-number-2 {
+    background-color: #6C757D;
+    color: white;
+}
+
+/* Zoom animation on hover */
+.zoom-image {
+    transition: transform 0.3s ease-in-out;
+    max-width: 100%;
+    height: auto;
+}
+
+.zoom-image:hover {
+    transform: scale(1.1);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .text-section {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .heart-blink{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.color-change {
+    animation: colorChange 1s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% { color: #6f42c1; }
+    50% { color: #d63384; }
+    100% { color: #0d6efd; }
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+.course-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+
+
+/* Heart Blink Animation */
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+.heart-blink {
+    font-size: 24px;
+    animation: blink 1.5s infinite;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+}
+
+/* Text Color Animation for "love" */
+@keyframes color-change {
+    0% { color: #e74c3c; }
+    25% { color: #3498db; }
+    50% { color: #2ecc71; }
+    75% { color: #f39c12; }
+    100% { color: #e74c3c; }
+}
+
+.love-text {
+    display: inline-block;
+    animation: color-change 3s infinite;
+}
+
+/* Responsive and Alignment Styles */
+.heart-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+    .heart-blink{
+        display: none;
+    }
+}
+
+.img-fluid {
+    max-width: 200%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+.bg-light-blue {
+    background-color: #226f7a;
+}
+.btn-view {
+    background-color: #ff9800;
+    color: rgb(0, 0, 0);
+}
+.header-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+}
+.angular{
+    display: flex;
+    margin-left: 150px;
+    color: rgb(226, 172, 72);
+}
+
+
+
+
+
+
+
+
+
+a {
+    text-decoration: none;
+}
+.login-page {
+    width: 100%;
+    height: 100vh;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+}
+.form-right i {
+    font-size: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+label {
+    font-weight: 600;
+    color: #666;
+}
+body {
+  background: #f1f1f1;
+}
+.box8{
+  box-shadow: 0px 0px 5px 1px #999;
+}
+.mx-t3{
+  margin-top: -3rem;
+}
+
+
+
+
+
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+}
+.form-control.is-invalid {
+    border-color: #dc3545;
+}
+.btn-change-password {
+    background-color: #28a745;
+    color: white;
+}

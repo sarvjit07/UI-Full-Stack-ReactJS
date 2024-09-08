@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"> </script>
+    <title>Document</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f8ff;
+        }
+
+        .logout-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .logout-container h1 {
+            color: #28a745;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .logout-container p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .logout-container .thank-you {
+            color: #007bff;
+            font-weight: bold;
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+
+        .logout-container .quote {
+            font-style: italic;
+            font-size: 14px;
+            color: #888;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .logout-container {
+                padding: 20px;
+            }
+            .logout-container h1 {
+                font-size: 24px;
+            }
+            .logout-container p {
+                font-size: 14px;
+            }
+            .logout-container .thank-you {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logout-container">
+        <h1>Logout Successful</h1>
+        <p>You have been successfully logged out of your account.</p>
+        <p class="thank-you">Thank you for visiting! We hope to see you again soon.</p>
+    
+        <div class="quote">
+            <p>"The only limit to our realization of tomorrow is our doubts of today." - Franklin D. Roosevelt</p>
+        </div>
+    </div>
+    
+</body>
+</html>
