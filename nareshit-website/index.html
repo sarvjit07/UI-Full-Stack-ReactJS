@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"> </script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <div class="sticky-top ">
+    <div class="small-menu-row ">
+      <div class="col-12 py-1 pe-4">
+        <div class="small-nav col-12 float-right text-end align-middle">
+          <a href="" target="_blank">Blogs</a><span class="me-1 ms-1">|</span>
+          <a href="" target="_blank">New Batches</a><span class="me-1 ms-1">|</span>
+          <a href="" target="_blank">Hire From Us</a><span class="me-1 ms-1">|</span>
+          <a href="#" id="copyPhoneNumber" value="7070482709">
+            <span class="bi bi-phone-fill">+917070482709</span>
+          </a><span class="me-1 ms-1">|</span>
+          <a href="#" id="copyEmail" value="sarvjit1309@gmail.com">
+            <span class="bi bi-envelope-fill me-2"></span>Nareshit@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="Images/naresh-it-logo2.png" style="height: 38px;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"><span
+                  class="bi bi-house-door-fill me-1"></span>Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about.html"><span
+                  class="bi bi-question-circle-fill me-1"></span>About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="service.html"><span
+                  class="bi bi-shield-fill-check me-1"></span>Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contact.html"><span
+                  class="bi bi-phone-fill me-1"></span>Contact Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle bi bi-arrow-right-square-fill" href="#" id="navbarDropdown"
+                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Sign In
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item bi bi-box-arrow-down-right" href="signin.html"><span class="ms-2">Sign
+                      In</span> </a></li>
+                <li><a class="dropdown-item bi bi-box-arrow-up-right" href="logout.html"><span class="ms-2">Log
+                      Out</span></a></li>
+                <li><a class="dropdown-item bi bi-person-add " href="signup.html"> <span class="ms-1">Sign Up</span></a>
+                </li>
+                <li><a class="dropdown-item bi bi-unlock " href="change-password.html"> <span class="ms-1">Change
+                      Password</span></a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="bi bi-person-fill-gear nav-link disabled"> <span class="ms-1">Admin Login</span></a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="carousel slide" id="banners" data-bs-theme="dark" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="1000">
+        <img src="Images/1500_x_600.jpg" class="carousel-image w-100 d-block">
+      </div>
+      <div class="carousel-item" data-bs-interval="1000">
+        <img src="Images/ds-banner-02.jpg" class="carousel-image w-100 d-block">
+      </div>
+      <div class="carousel-item" data-bs-interval="1000">
+        <img src="Images/is-banner-2.jpg" class="carousel-image w-100 d-block">
+      </div>
+    </div>
+    <div class="button">
+      <button data-bs-slide="prev" data-bs-target="#banners" class="carousel-control-prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button data-bs-slide="next" data-bs-target="#banners" class="carousel-control-next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+      <div class="carousel-indicators">
+        <button class="active scroll circle-btn" data-bs-slide-to="0" data-bs-target="#banners"></button>
+        <button class="scroll circle-btn" data-bs-slide-to="1" data-bs-target="#banners"></button>
+        <button class="scroll circle-btn" data-bs-slide-to="2" data-bs-target="#banners"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <!-- Header Section -->
+    <div class="text-center mb-4">
+        <h2><span class="text-danger">Our</span> Services</h2>
+        <p>Explore new and trending free online courses.</p>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <ul class="nav nav-tabs justify-content-center mb-4">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Trending</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Full Stack Courses</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Job Placement Assistance Programs</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">NASSCOM Approved Courses</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Internships</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Certification courses</a>
+        </li>
+    </ul>
+
+    <!-- Course Cards Carousel -->
+    <div id="courseCarousel" class="carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card course-card mb-4 shadow-sm">
+                            <img src="./Images/Manual Test.png" class="card-img-top" alt="Course Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Manual Testing</h5>
+                                <p class="card-text">Dur: ---<br>Start Date: Batch Starts Soon</p>
+                                <a href="#" class="btn btn-primary">ENROLL</a>
+                                <a href="#" class="btn btn-outline-secondary">SHARE</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card course-card mb-4 shadow-sm">
+                          <img src="./Images/web.png" class="card-img-top" alt="Course Image">
+                          <div class="card-body">
+                              <h5 class="card-title">Manual Testing</h5>
+                              <p class="card-text">Dur: ---<br>Start Date: Batch Starts Soon</p>
+                              <a href="#" class="btn btn-primary">ENROLL</a>
+                              <a href="#" class="btn btn-outline-secondary">SHARE</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card course-card mb-4 shadow-sm">
+                        <img src="./Images/react-js-online-training-nareshit.png" class="card-img-top" alt="Course Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Manual Testing</h5>
+                            <p class="card-text">Dur: ---<br>Start Date: Batch Starts Soon</p>
+                            <a href="#" class="btn btn-primary">ENROLL</a>
+                            <a href="#" class="btn btn-outline-secondary">SHARE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card course-card mb-4 shadow-sm">
+                      <img src="./Images/python.png" class="card-img-top" alt="Course Image">
+                      <div class="card-body">
+                          <h5 class="card-title">Manual Testing</h5>
+                          <p class="card-text">Dur: ---<br>Start Date: Batch Starts Soon</p>
+                          <a href="#" class="btn btn-primary">ENROLL</a>
+                          <a href="#" class="btn btn-outline-secondary">SHARE</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card course-card mb-4 shadow-sm">
+                    <img src="./Images/multi-cloud-online-training-nareshit.png" class="card-img-top" alt="Course Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Manual Testing</h5>
+                        <p class="card-text">Dur: ---<br>Start Date: Batch Starts Soon</p>
+                        <a href="#" class="btn btn-primary">ENROLL</a>
+                        <a href="#" class="btn btn-outline-secondary">SHARE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card course-card mb-4 shadow-sm">
+                  <img src="./Images/Java.png" class="card-img-top" alt="Course Image">
+                  <div class="card-body">
+                      <h5 class="card-title">Manual Testing</h5>
+                      <p class="card-text">Dur: ---<br>Start Date: Batch Starts Soon</p>
+                      <a href="#" class="btn btn-primary">ENROLL</a>
+                      <a href="#" class="btn btn-outline-secondary">SHARE</a>
+                  </div>
+              </div>
+          </div>
+                
+                    <!-- Additional cards go here -->
+                </div>
+            </div>
+            <div class="carousel-item active">
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="card course-card mb-4 shadow-sm">
+                          <img src="./Images/java-real-time-projects-online-training.png" class="card-img-top" alt="Course Image">
+                          <div class="card-body">
+                              <h5 class="card-title">Manual Testing</h5>
+                              <p class="card-text">Dur: ---<br>Start Date: Batch Starts Soon</p>
+                              <a href="#" class="btn btn-primary">ENROLL</a>
+                              <a href="#" class="btn btn-outline-secondary">SHARE</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card course-card mb-4 shadow-sm">
+                        <img src="./Images/gppgle_cloud.jpg" class="card-img-top" alt="Course Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Manual Testing</h5>
+                            <p class="card-text">Dur: ---<br>Start Date: Batch Starts Soon</p>
+                            <a href="#" class="btn btn-primary">ENROLL</a>
+                            <a href="#" class="btn btn-outline-secondary">SHARE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card course-card mb-4 shadow-sm">
+                      <img src="./Images/full-stack-software-testing-online-training-nareshit.png" class="card-img-top" alt="Course Image">
+                      <div class="card-body">
+                          <h5 class="card-title">Manual Testing</h5>
+                          <p class="card-text">Dur: ---<br>Start Date: Batch Starts Soon</p>
+                          <a href="#" class="btn btn-primary">ENROLL</a>
+                          <a href="#" class="btn btn-outline-secondary">SHARE</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card course-card mb-4 shadow-sm">
+                  <img src="./Images/devops-with-aws-online-training.png" class="card-img-top" alt="Course Image">
+                  <div class="card-body">
+                        <h5 class="card-title">Manual Testing</h5>
+                        <p class="card-text">Dur: ---<br>Start Date: Batch Starts Soon</p>
+                        <a href="#" class="btn btn-primary">ENROLL</a>
+                        <a href="#" class="btn btn-outline-secondary">SHARE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card course-card mb-4 shadow-sm">
+                <img src="./Images/data sci.png" class="card-img-top" alt="Course Image">
+                  <div class="card-body">
+                      <h5 class="card-title">Manual Testing</h5>
+                      <p class="card-text">Dur: ---<br>Start Date: Batch Starts Soon</p>
+                      <a href="#" class="btn btn-primary">ENROLL</a>
+                      <a href="#" class="btn btn-outline-secondary">SHARE</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card course-card mb-4 shadow-sm">
+                <img src="./Images/aws-online-training-nareshit.png" class="card-img-top" alt="Course Image">
+                <div class="card-body">
+                    <h5 class="card-title">Manual Testing</h5>
+                    <p class="card-text">Dur: ---<br>Start Date: Batch Starts Soon</p>
+                    <a href="#" class="btn btn-primary">ENROLL</a>
+                    <a href="#" class="btn btn-outline-secondary">SHARE</a>
+                </div>
+            </div>
+        </div>
+              
+                  <!-- Additional cards go here -->
+              </div>
+          </div>
+            <!-- Additional carousel items go here -->
+        </div>
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#courseCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#courseCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Explore More Button -->
+    <div class="text-center mt-4">
+        <a href="#" class="btn btn-primary">EXPLORE MORE COURSES</a>
+    </div>
+</div>
+  <hr>
+  <div class="section2">
+    <div class="button text-center mt-5">
+      <button class="bg-warning p-2 rounded-3">Show me what's in this package</button>
+    </div>
+    <div class="button2 text-center mt-4">
+      <button class="bg-secondary p-2 rounded-3 text-white">What is the Package</button>
+    </div>
+
+    <div class="button text-center mt-4 text-white">
+      <p>A package is a small container in which a quantity of something is sold. Packages are either small boxes made
+        of thin cardboard, or bags or envelopes made of paper or plastic. ... When a product is packaged, it is put into
+        containers to be sold.</p>
+    </div>
+    <div class="section1">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <table class="table table-bordered section1-table">
+              <thead class="table-light">
+                <tr>
+                  <th>Department</th>
+                  <th>Included</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>M.Tech</td>
+                  <td><i class="bi bi-check-lg text-success"></i></td>
+                </tr>
+                <tr>
+                  <td>B.Tech</td>
+                  <td><i class="bi bi-check-lg text-success"></i></td>
+                </tr>
+                <tr>
+                  <td>MCA</td>
+                  <td><i class="bi bi-check-lg text-success"></i></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-4 section1-image text-center">
+            <img src="./Images/btech.jpeg" class="zoom-image" alt="Team Image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section3">
+    <div class="container">
+      <h5 class="text-center">What is the job</h5>
+      <div class="row text-center">
+        <div class="col-md-3">
+          <div class="icon-box">
+            <i class="bi bi-keyboard"></i>
+            <h5>Types of jobs</h5>
+            <ul class="section3-links">
+              <li>Volcanologist</li>
+              <li>Quantum Physicist</li>
+              <li>Oceanographer</li>
+              <li>Biomedical Engineer</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="icon-box">
+            <i class="bi bi-person-workspace "></i>
+            <h5>Define job profile</h5>
+            <p>Job profile developed by the personnel department of a business might include responsibilities, required
+              qualifications, advancement prospects.</p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="icon-box">
+            <i class="bi bi-file-text"></i>
+            <h5>Job profile summary</h5>
+            <p>Profile summary is a summary of your education, skills, career experiences, and goals.</p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="icon-box">
+            <i class="bi bi-laptop"></i>
+            <h5>The IT skills</h5>
+            <ul class="section3-links">
+              <li>Coding</li>
+              <li>Communication</li>
+              <li>Networks</li>
+              <li>Time Management</li>
+            </ul>
+          </div>
+        </div>
+
+          <div class="col-md-3">
+            <div class="icon-box">
+              <i class="bi bi-person-lines-fill"></i>
+              <h5>Freshers key skills</h5>
+              <ul class="section3-links">
+                <li>Communication</li>
+                <li>Decision Making</li>
+                <li>Time Management</li>
+                <li>Adaptability</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="icon-box">
+              <i class="bi bi-file-earmark-ppt-fill "></i>
+              <h5>Personal skills</h5>
+              <p>A skill is the ability to do something well, a certain competence or proficiency. Skills are typically
+                acquired or developed through direct experiences and training, and they can require sustained effort.
+              </p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  
+  <div class="section4">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- First Section -->
+            <div class="col-md-6">
+                <div class="d-flex">
+                    <div class="circle-number">1</div>
+                    <div class="ms-3">
+                        <h5>Why do you want this job?</h5>
+                        <p>The hiring manager wants to: Learn about your career goals and how this position fits into your plan. Make sure that you are sincerely interested in the job and will be motivated to perform if hired. Find out what you know about the company, industry, position (and if you took the time to research).</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Image -->
+            <div class="col-md-6 text-end">
+                <img src="./Images/ind3.png" width="85%"  class="zoom-image" alt="Job Image">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row align-items-center">
+            <!-- Image -->
+            <div class="col-md-6">
+                <img src="./Images/ind3.png" width="85%"  class="zoom-image" alt="Job Image 2">
+            </div>
+            <!-- Second Section -->
+            <div class="col-md-6 text-section">
+                <div class="d-flex justify-content-end">
+                    <div class="me-3">
+                        <h5>What is a CV example?</h5>
+                        <p>A resume is a brief summary. If you were writing your resume, you would include only the work information that relates specifically to the job you're applying for. But for a Curriculum Vitae (CV), you would also include all your teaching experience, lab, and fieldwork.</p>
+                    </div>
+                    <div class="circle-number circle-number-2">2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="section4">
+  <div class="container">
+      <div class="row align-items-center">
+          <!-- third Section -->
+          <div class="col-md-6">
+              <div class="d-flex">
+                  <div class="circle-number">3</div>
+                  <div class="ms-3">
+                      <h5>Do you need a resume for your first job?</h5>
+                      <p>When writing your first resume with no work experience, it's appropriate to include casual jobs like babysitting, pet sitting, lawn mowing, and shoveling snow. All experience counts and the way you present yourself, your skills, and your assets to a hiring manager begins with a strong resume.</p>
+                  </div>
+              </div>
+          </div>
+          <!-- Image -->
+          <div class="col-md-6 text-end">
+              <img src="./Images/ind3.png" width="85%"  class="zoom-image" alt="Job Image">
+          </div>
+      </div>
+
+      <hr>
+
+      <div class="row align-items-center">
+          <!-- Image -->
+          <div class="col-md-6">
+              <img src="./Images/ind3.png" width="85%" class="zoom-image" alt="Job Image 2">
+          </div>
+          <!-- fourth Section -->
+          <div class="col-md-6 text-section">
+              <div class="d-flex justify-content-end">
+                  <div class="me-3">
+                      <h5>Why do you think you can do well in this job?</h5>
+                      <p>I believe I will do well in this job because I have the relevant skills and it is my field of interest. ... I have a confident that I can do well in the job because of self confidence, positive attitude. Previous success also brings self confidence for the future success.</p>
+                  </div>
+                  <div class="circle-number circle-number-2">4</div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="text-center mb-5 mt-4">
+  <button class="bg-warning p-3 border-0 rounded-5 bi bi-phone"><span class="ms-2">Request Call Back</span></button>
+  <button class="bg-secondary p-3 ms-5 border-0 rounded-5 text-white">FAQ'S</button>
+</div>
+
+<div class="container my-5">
+  <div class="row align-items-center">
+      <!-- Left Section -->
+      <div class="col-lg-6 text-center text-lg-start">
+          <h1>
+              <span class="color-change">2801+</span> Our students placed in the recent years
+          </h1>
+          <p class="text-muted">98% of students would recommend "Naresh IT" to a friend</p>
+      </div>
+      
+      <!-- Right Section -->
+      <div class="col-lg-6">
+          <div class="row gy-4">
+              <div class="col-md-6">
+                  <div class="card p-3 shadow-sm">
+                      <p>“I joined Naresh IT for Full Stack Python, with SATISH GUPTA Sir's amazing teaching making the journey easy for beginners and non-IT students can also easily understand....”</p>
+                      <div class="d-flex align-items-center">
+                          <div class="me-2">
+                              <img src="./Images/unnamed_(10).png" class="rounded-circle" alt="Profile Picture">
+                          </div>
+                          <div>
+                              <h6 class="mb-0">Shruthi Bhadani</h6>
+                              <small>Course: By Mr. Satish Gupta</small>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="card p-3 shadow-sm">
+                      <p>“It was a great learning experience for me in NARESH IT, One of the Best trainers in NARESH IT for Java. After attending any core java classes anyone can fall in love with Java.”</p>
+                      <div class="d-flex align-items-center">
+                          <div class="me-2">
+                              <img src="./Images/unnamed_(1).png" class="rounded-circle" alt="Profile Picture">
+                          </div>
+                          <div>
+                              <h6 class="mb-0">Aishwarya Aishu</h6>
+                              <small>Course: By Mr. Kishan B</small>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="card p-3 shadow-sm">
+                      <p>“Raham sir’s DevOps course was impressive and excellent, providing in-depth content on tools like Jenkins, Docker, Ansible, K8S, and Terraform.”</p>
+                      <div class="d-flex align-items-center">
+                          <div class="me-2">
+                              <img src="./Images/unnamed_(8).png" class="rounded-circle" alt="Profile Picture">
+                          </div>
+                          <div>
+                              <h6 class="mb-0">Asma Samdani</h6>
+                              <small>Course: By Mr. Raham</small>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="card p-3 shadow-sm">
+                      <p>“Naresh IT's Kishore Babu sir is an excellent faculty, providing real-time examples and a superb teaching method for Salesforce CRM, making it an excellent choice for learning.”</p>
+                      <div class="d-flex align-items-center">
+                          <div class="me-2">
+                              <img src="./Images/unnamed_(9).png" class="rounded-circle" alt="Profile Picture">
+                          </div>
+                          <div>
+                              <h6 class="mb-0">Keerthi Reddy</h6>
+                              <small>Course: By Mr. Kishore</small>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+  <section class="student">
+    <div class="container">
+      <h2 class="text-center placed-students-title">Placed Students</h2>
+      <p class="text-center mb-5">Explore new and trending free online coursessss.</p>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img src="./Images/Divya_New_New.jpg" class="card-img-top mx-auto" alt="Divya">
+            <div class="card-body">
+              <h5 class="card-title">Divya</h5>
+              <p class="card-text">.NET Developer</p>
+              <p class="company">Digi Telescope</p>
+              <a href="#" class="linkedin-icon"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img src="./Images/Nivedita.jpg" class="card-img-top mx-auto" alt="Nivedita">
+            <div class="card-body">
+              <h5 class="card-title">Nivedita</h5>
+              <p class="card-text">Java Developer</p>
+              <p class="company">TELCOVAS</p>
+              <a href="#" class="linkedin-icon"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img src="./Images/Thota_Ramakotaiah_New.jpg" class="card-img-top mx-auto" alt="Thota Ramakotaiah">
+            <div class="card-body">
+              <h5 class="card-title">Thota Ramakotaiah</h5>
+              <p class="card-text">Java Developer</p>
+              <p class="company">MK Unisoft</p>
+              <a href="#" class="linkedin-icon"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img src="./Images/Vikash_Kumar.jpg" class="card-img-top mx-auto" alt="Vikash Kumar">
+            <div class="card-body">
+              <h5 class="card-title">Vikash Kumar</h5>
+              <p class="card-text">.NET Developer</p>
+              <p class="company">Softpal Technologies</p>
+              <a href="#" class="linkedin-icon"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img src="./Images/Vikash_Kumar.jpg" class="card-img-top mx-auto" alt="Vikash Kumar">
+            <div class="card-body">
+              <h5 class="card-title">Vikash Kumar</h5>
+              <p class="card-text">.NET Developer</p>
+              <p class="company">Softpal Technologies</p>
+              <a href="#" class="linkedin-icon"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img src="./Images/Vikash_Kumar.jpg" class="card-img-top mx-auto" alt="Vikash Kumar">
+            <div class="card-body">
+              <h5 class="card-title">Vikash Kumar</h5>
+              <p class="card-text">.NET Developer</p>
+              <p class="company">Softpal Technologies</p>
+              <a href="#" class="linkedin-icon"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img src="./Images/Vikash_Kumar.jpg" class="card-img-top mx-auto" alt="Vikash Kumar">
+            <div class="card-body">
+              <h5 class="card-title">Vikash Kumar</h5>
+              <p class="card-text">.NET Developer</p>
+              <p class="company">Softpal Technologies</p>
+              <a href="#" class="linkedin-icon"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img src="./Images/Vikash_Kumar.jpg" class="card-img-top mx-auto" alt="Vikash Kumar">
+            <div class="card-body">
+              <h5 class="card-title">Vikash Kumar</h5>
+              <p class="card-text">.NET Developer</p>
+              <p class="company">Softpal Technologies</p>
+              <a href="#" class="linkedin-icon"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <!-- Logo and Description -->
+        <div class="col-md-4 mb-4">
+          <img src="./Images/naresh-it-logo.png" alt="" style="width: 197px;" >
+          <p>NNV Naresh is an entrepreneur armed with a noble vision to make a difference in the career aspirations of
+            the students. 20+ years of experience in the education sector, Naresh is the founder and the driving force
+            behind the victorious journey of NareshIT.</p>
+          <!-- Social Icons -->
+          <div class="social-icons d-flex">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-whatsapp"></i></a>
+            <a href="#"><i class="bi bi-telegram"></i></a>
+          </div>
+          <!-- Store Icons -->
+          <div class="store-icons d-flex mt-3">
+            <a href="#"><img src="./Images/andorid-store.svg" alt="Google Play"></a>
+            <a href="#"><img src="./Images/apple-store.svg" alt="App Store"></a>
+          </div>
+        </div>
+
+        <!-- Quick Access -->
+        <div class="col-md-3 mb-4">
+          <h5>Company</h5>
+          <div class="company">
+            <a href="#">About Us</a>
+            <a href="#">Trainers Profile</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Refund Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Careers</a>
+            <a href="#">Testimonials</a>
+            <a href="#">News & Events</a>
+          </div>
+        </div>
+
+        <div class="col-md-2 mb-4">
+          <h5>Quick Access</h5>
+          <div class="quick-access">
+            <a href="#">Become an Instructor</a>
+            <a href="#">Hire from NareshIT</a>
+            <a href="#">New Batches</a>
+            <a href="#">NareshJobs</a>
+            <a href="#">SeshaJobs</a>
+            <a href="#">Interview Questions</a>
+            <a href="#">Blogs</a>
+            <a href="#">Internships</a>
+          </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="col-md-3 mb-4">
+          <h5>Reach Us</h5>
+          <div class="contact-info">
+            <p><strong>Phone:</strong> 040-23746666</p>
+            <p><strong>Email:</strong> info@nareshit.com</p>
+            <p><strong>Call/WhatsApp:</strong> +91 8179191999</p>
+            <p><strong>International:</strong> +1 404-232-9879, +1 248-522-6925</p>
+            <p><strong>Head Office:</strong> 2nd Floor, Durga Bhavani Plaza, Ameerpet, Hyderabad, 500016.</p>
+            <p><strong>Ameerpet Branch:</strong> Ground Floor, Manjeera Square, opp Prime Hospital, Ameerpet, Hyd.</p>
+            <p><strong>KPHB Branch:</strong> 2nd Floor, Sreeramoju Complex, KPHB Phase 1, Hyderabad, 500072.</p>
+            <p><strong>USA:</strong> 5007 Arbor View Pkwy NW Acworth, GA, 30101</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

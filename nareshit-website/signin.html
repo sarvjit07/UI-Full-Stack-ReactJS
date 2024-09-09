@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"> </script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="sticky-top">
+    <div class="small-menu-row ">
+      <div class="col-12 py-1 pe-4">
+        <div class="small-nav col-12 float-right text-end align-middle">
+          <a href="" target="_blank">Blogs</a><span class="me-1 ms-1">|</span>
+          <a href="" target="_blank">New Batches</a><span class="me-1 ms-1">|</span>
+          <a href="" target="_blank">Hire From Us</a><span class="me-1 ms-1">|</span>
+          <a href="#" id="copyPhoneNumber" value="7070482709">
+            <span class="bi bi-phone-fill">+917070482709</span>
+          </a><span class="me-1 ms-1">|</span>
+          <a href="#" id="copyEmail" value="sarvjit1309@gmail.com">
+            <span class="bi bi-envelope-fill me-2"></span>Nareshit@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="Images/naresh-it-logo2.png" style="height: 38px;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"><span
+                  class="bi bi-house-door-fill me-1"></span>Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about.html"><span
+                  class="bi bi-question-circle-fill me-1"></span>About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="service.html"><span
+                  class="bi bi-shield-fill-check me-1"></span>Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contact.html"><span
+                  class="bi bi-phone-fill me-1"></span>Contact Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle bi bi-arrow-right-square-fill" href="#" id="navbarDropdown"
+                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Sign In
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item bi bi-box-arrow-down-right" href="signin.html"><span class="ms-2">Sign
+                      In</span> </a></li>
+                <li><a class="dropdown-item bi bi-box-arrow-up-right" href="logout.html"><span class="ms-2">Log
+                      Out</span></a></li>
+                <li><a class="dropdown-item bi bi-person-add " href="signup.html"> <span class="ms-1">Sign Up</span></a>
+                </li>
+                <li><a class="dropdown-item bi bi-unlock " href="change-password.html"> <span class="ms-1">Change
+                      Password</span></a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="bi bi-person-fill-gear nav-link disabled"> <span class="ms-1">Admin Login</span></a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+  <div class="login-page bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <h3 class="mb-3">Login Now</h3>
+          <div class="bg-white shadow rounded">
+            <div class="row">
+              <div class="col-md-7 pe-0">
+                <div class="form-left h-100 py-5 px-5">
+                  <form action="" class="row g-4">
+                    <div class="col-12">
+                      <label>Username<span class="text-danger">*</span></label>
+                      <div class="input-group">
+                        <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                        <input type="text" class="form-control" placeholder="Enter Username">
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <label>Password<span class="text-danger">*</span></label>
+                      <div class="input-group">
+                        <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                        <input type="text" class="form-control" placeholder="Enter Password">
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                        <label class="form-check-label" for="inlineFormCheck">Remember me</label>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <a href="./change-password.html" class="float-end text-primary">Change Password?</a>
+                    </div>
+
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary px-4 float-end mt-4">Login </button>
+                      <button type="submit" class="btn btn-primary px-4 float-end mt-4 me-3">SignUp</button>
+
+                    </div>
+                 
+                  </form>
+                </div>
+              </div>
+              <div class="col-md-5 ps-0 d-none d-md-block">
+                <div class="form-right h-100 bg-primary text-white text-center pt-5">
+                  <i> <img src="./Images/naresh-it-logo2.png" width="80%" alt=""></i>
+                  <h2>Welcome Back!!! ❤️</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="text-end text-secondary mt-3">Naresh It Welcome You ❤️</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <!-- Logo and Description -->
+        <div class="col-md-4 mb-4">
+          <img src="./Images/naresh-it-logo.png" alt="">
+          <p>NNV Naresh is an entrepreneur armed with a noble vision to make a difference in the career aspirations of
+            the students. 20+ years of experience in the education sector, Naresh is the founder and the driving force
+            behind the victorious journey of NareshIT.</p>
+          <!-- Social Icons -->
+          <div class="social-icons d-flex">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-whatsapp"></i></a>
+            <a href="#"><i class="bi bi-telegram"></i></a>
+          </div>
+          <!-- Store Icons -->
+          <div class="store-icons d-flex mt-3">
+            <a href="#"><img src="./Images/andorid-store.svg" alt="Google Play"></a>
+            <a href="#"><img src="./Images/apple-store.svg" alt="App Store"></a>
+          </div>
+        </div>
+
+        <!-- Quick Access -->
+        <div class="col-md-3 mb-4">
+          <h5>Company</h5>
+          <div class="company">
+            <a href="#">About Us</a>
+            <a href="#">Trainers Profile</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Refund Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Careers</a>
+            <a href="#">Testimonials</a>
+            <a href="#">News & Events</a>
+          </div>
+        </div>
+
+        <div class="col-md-2 mb-4">
+          <h5>Quick Access</h5>
+          <div class="quick-access">
+            <a href="#">Become an Instructor</a>
+            <a href="#">Hire from NareshIT</a>
+            <a href="#">New Batches</a>
+            <a href="#">NareshJobs</a>
+            <a href="#">SeshaJobs</a>
+            <a href="#">Interview Questions</a>
+            <a href="#">Blogs</a>
+            <a href="#">Internships</a>
+          </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="col-md-3 mb-4">
+          <h5>Reach Us</h5>
+          <div class="contact-info">
+            <p><strong>Phone:</strong> 040-23746666</p>
+            <p><strong>Email:</strong> info@nareshit.com</p>
+            <p><strong>Call/WhatsApp:</strong> +91 8179191999</p>
+            <p><strong>International:</strong> +1 404-232-9879, +1 248-522-6925</p>
+            <p><strong>Head Office:</strong> 2nd Floor, Durga Bhavani Plaza, Ameerpet, Hyderabad, 500016.</p>
+            <p><strong>Ameerpet Branch:</strong> Ground Floor, Manjeera Square, opp Prime Hospital, Ameerpet, Hyd.</p>
+            <p><strong>KPHB Branch:</strong> 2nd Floor, Sreeramoju Complex, KPHB Phase 1, Hyderabad, 500072.</p>
+            <p><strong>USA:</strong> 5007 Arbor View Pkwy NW Acworth, GA, 30101</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
