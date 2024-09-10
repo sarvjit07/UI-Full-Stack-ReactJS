@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Header and Slider</title>
+    <link rel="stylesheet" href="../../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script src="../../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <link rel="stylesheet" href="../../../../images/goat-movie.avif">
+    <style>
+        body{
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .navbar-nav .nav-link {
+            color: black;
+        }
+
+        .slider-image {
+            width: 100%;
+            height: 377px;
+            object-fit: cover;
+        }
+
+        .offcanvas-body .card {
+            margin-bottom: 10px;
+        }
+
+        .header-text {
+            color: black;
+            font-size: 2rem;
+        }
+        .btn-book {
+            background-color: #007bff;
+            color: rgb(0, 0, 0);
+        }
+        @media screen and (max-width: 720px) {
+            .slider-image {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+        }
+        .carousel{
+            display: none;
+        }
+        }
+    </style>
+
+ <script type="text/javascript">
+    function BookClick(){
+        document.getElementById("summaryContainer").style.display = "block";
+        document.getElementById("btnBooking").style.display = "none";
+
+
+        movieName = document.getElementById("lstMovies").value;
+        document.getElementById("lblMovie").innerText = movieName;
+
+        if(movieName=="GREATEST OF ALL TIME"){
+            document.getElementById("imgPoster").src = "../../../../images/goat-movie.avif";
+        } else {
+            document.getElementById("imgPoster").src = "../../../../images/stree-moive.jpg";
+        }
+
+        document.getElementById("lblDate").innerText = document.getElementById("lstDate").value;
+        document.getElementById("lblCinema").innerText = document.getElementById("lstCinema").value;
+        document.getElementById("lblTime").innerText = document.getElementById("lstTime").value;
+
+    }
+    function ModifyClick(){
+        document.getElementById("lblBooking").innerHTML = "Modify Booking";
+        document.getElementById("btnBook").innerHTML = "Save";
+        document.getElementById("btnBook").className = "btn btn-success";
+    }
+</script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-brand">
+        <div class="container">
+            <a class="navbar-brand d-flex justify-content-between" href="#"><img class="brand-logo" src="../../../../images/inox_web-logo.avif" alt="" width="15%">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="bi bi-eye me-1"></span>Showtimings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="bi bi-camera-reels me-1"></span>Cinemas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="bi bi-coin me-1"></span>Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-dark mb-2 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCity" aria-controls="offcanvasCity"><span class="bi bi-pin-map me-1"></span>Hyderabad<span class="bi bi-arrow-down-short me-1"></span></button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-dark" type="button" href="#"><span class="bi bi-person me-1"></span>Login</button>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Slider -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../../../../images/goat-banner.png" class="slider-image" alt="Movie Poster 3">
+            </div>
+            <div class="carousel-item">
+                <img src="../../../../images/nani-banner.png" class="slider-image" alt="Movie Poster 2">
+            </div>
+            <div class="carousel-item">
+                <img src="../../../../images/inox-banner.png" class="slider-image" alt="Movie Poster 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Offcanvas for City Selection -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCity" aria-labelledby="offcanvasCityLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasCityLabel">Select City</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Hyderabad</h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Mumbai</h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Bangalore</h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Chennai</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center mt-4">
+        <button data-bs-target="#booking" id="btnBooking" data-bs-toggle="modal" class="btn btn-warning mt-2 p-3">Quick Booking</button>
+    </div>
+    <div class="modal fade" id="booking">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="lblBooking">Quick Booking</h2>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <nav class="p-2 d-flex justify-content-between">
+                        <div>
+                            <select class="form-select" id="lstMovies">
+                                <option>Select Movie</option>
+                                <option>GREATEST OF ALL TIME</option>
+                                <option>STREE 2</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select" id="lstDate">
+                                <option>Select Date</option>
+                                <option>Today 10 Sep</option>
+                                <option>Tomorrow 11 Sep</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select" id="lstCinema">
+                                <option>Select Cinema</option>
+                                <option>INOX B'HILLS</option>
+                                <option>PVR AMEERPET</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select" id="lstTime">
+                                <option>Select Time</option>
+                                <option>10:30 AM</option>
+                                <option>03:45 PM</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button id="btnBook" onclick="BookClick()" data-bs-dismiss="modal" class="btn btn-secondary">Book</button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="d-flex justify-content-center">
+    <div width: 235px; class="mt-1" id="summaryContainer" style="display: none; width: 235px;">
+        <dl >
+            <h4 class="bg-dark text-white p-2 bi bi-ticket">Booking Summary</h4>
+            <img width="100%" id="imgPoster">
+            <dl class="row">
+                <dt class="col-3">Movie</dt>
+                <dd class="col-9" id="lblMovie"></dd>
+                <dt class="col-3">Date</dt>
+                <dd class="col-9" id="lblDate"></dd>
+                <dt class="col-3">Cinema</dt>
+                <dd class="col-9" id="lblCinema"></dd>
+                <dt class="col-3">Time</dt>
+                <dd class="col-9" id="lblTime"></dd>
+            </dl>
+        </dl>
+        <button onclick="ModifyClick()" data-bs-target="#booking" data-bs-toggle="modal" class="btn btn-warning w-100 bi bi-pen-fill mb-5">Modify Booking</button>
+    </div>
+</div>
+</body>
+</html>
