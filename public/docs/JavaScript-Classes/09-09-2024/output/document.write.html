@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document.write</title>
     <script>
         function DeleteClick(){
            result = confirm("Delete Record\nAre you sure?");
            if(result==true)
            {
-               document.write("<font color='red'><h2>Record deleted successfully</h2></font><br><a href='output.html'>back</a>");
+               document.write("<font color='red'><h2>Record deleted successfully</h2></font><br><a href='./document.write.html'>back</a>");
            }
            else
            {
@@ -19,6 +19,7 @@
     </script>
 </head>
 <body>
-    <button onclick="DeleteClick()">Delete</button>
+    <h2>Document.write.html</h2>
+    <button onclick="DeleteClick()" href="./document.write.html">Delete</button>
 </body>
 </html>

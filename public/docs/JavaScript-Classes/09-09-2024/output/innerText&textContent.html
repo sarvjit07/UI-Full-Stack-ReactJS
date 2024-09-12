@@ -9,13 +9,15 @@
             result=confirm("Delete Record");
             if(result==true){
                 document.querySelector("p").innerText="<p>This is a <strong>paragraph</strong> with some <em>emphasis</em>.</p>";
-                document.querySelector("p").textContent="<p>Hello</p>";
-
+                
+            }else{
+                document.querySelector("p").textContent="Cancel....";
             }
         }
     </script>
 </head>
 <body>
+    <h2>outerHTML.html</h2>
     <button onclick="DeleteClick()">Delete</button>
     <p></p>
 </body>
