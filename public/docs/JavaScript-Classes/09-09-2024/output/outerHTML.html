@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>confirm()</title>
+    <title>outerHTML</title>
     <script>
-        function DeleteClick(){
-            result=confirm("Delete Record\n Successfully");
+        function DeleteClick() {
+            result=confirm("Deleted Click");
             if(result==true){
-                alert("Deleted...");
+                document.querySelector("p").outerHTML="<h1>Deleted Message</h1>";
+            }else{
+                document.querySelector("p").textContent="Canceled...";
             }
-            else{
-                alert("Canceled...");
-            }
+
         }
     </script>
+
 </head>
+
 <body>
     <button onclick="DeleteClick()">Delete</button>
+    <p>Hello</p>
 </body>
+
 </html>

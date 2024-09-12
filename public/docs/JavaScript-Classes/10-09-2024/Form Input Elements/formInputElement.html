@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Input</title>
+    <link rel="stylesheet" href="../../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript">
+        function SubmitClick(){
+            document.getElementById("lblId").innerText=document.getElementById("txtId").value;
+            document.getElementById("lblName").innerText=document.getElementById("txtName").value;
+            document.getElementById("lblPrice").innerText=document.getElementById("txtPrice").value;
+            document.getElementById("lblCity").innerText=document.getElementById("lstCities").value;
+
+            stockCheckbox=document.getElementById("optStock");
+            if(stockCheckbox.checked){
+                stock="Available";
+            }else{
+                stock="Out of Stock";
+            }
+
+            document.getElementById("lblStock").innerHTML=stock;
+        }
+    </script>
+</head>
+<body class="container-fluid d-flex justify-content-center">
+    <div class="w-25 border border-2 border-primary p-3 mt-4">
+        <h6>Register Product</h6>
+        <dl>
+            <dt>Product Id</dt>
+            <dd><input type="number" id="txtId" class="form-control"></dd>
+            <dt>Name</dt>
+            <dd><input type="text" id="txtName" class="form-control"></dd>
+            <dt>Price</dt>
+            <dd><input type="number" id="txtPrice" class="form-control"></dd>
+            <dd>
+                <select id="lstCities" class="form-select">
+                    <option>Select City</option>
+                    <option>Ara</option>
+                    <option>Patna</option>
+                    <option>Hyderabad</option>
+                </select>
+            </dd>
+            <dt>Stock</dt>
+            <dd class="form-switch">
+            <input type="checkbox" class="form-check-input" id="optStock">
+            <label>Available</label>
+        </dd>
+        </dl>
+        <button onclick="SubmitClick()" data-bs-target="#details" data-bs-toggle="modal" class="btn btn-primary w-100">Submit</button>
+    </div>
+    <div class="modal fade" id="details">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Product Details</h4>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl class="row">
+                        <dt class="col-3">Product Id</dt>
+                        <dd id="lblId" class="col-9"></dd>
+                        <dt class="col-3">Name</dt>
+                        <dd id="lblName" class="col-9"></dd>
+                        <dt class="col-3">Price</dt>
+                        <dd id="lblPrice" class="col-9"></dd>
+                        <dt class="col-3">City</dt>
+                        <dd id="lblCity" class="col-9"></dd>
+                        <dt class="col-3">Stock</dt>
+                        <dd id="lblStock" class="col-9"></dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

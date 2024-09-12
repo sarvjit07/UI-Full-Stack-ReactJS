@@ -1,0 +1,33 @@
+<!-- <script type="text/javascript">
+    "use strict";
+    x=10;
+    console.log(x);
+    var x;
+</script>
+
+<html>
+    <h1>Test js</h1>
+</html> -->
+
+
+
+
+
+<script>
+    function checkTDZ() {
+    try {
+      console.log(x); // Accessing x before initialization
+      let x = 10;
+    } catch (error) {
+      if (error instanceof ReferenceError) {
+        console.log("Temporal Dead Zone detected!");
+      } else {
+        console.log("An unexpected error occurred:", error);
+      }
+    }
+  }
+  
+  checkTDZ(); // Output: Temporal Dead Zone detected!
+</script>
+
+

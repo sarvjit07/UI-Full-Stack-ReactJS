@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>referenceName</title>
+    <link rel="stylesheet" href="../../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        function LoadPage(){
+            poster.src="../../../../images/4.png"
+            frmRegister.btnRegister.value="Register";
+            frmLogin.btnLogin.value="Login"
+           
+        }
+
+    </script>
+</head>
+<body onload="LoadPage()">
+        <div class="d-flex justify-content-center mt-4">
+            <img width="200" height="200" border="2" name="poster">
+        </div>
+            <div class="d-flex justify-content-center">
+                <form name="frmRegister">
+                    <h3>Register</h3>
+                    <input type="text" placeholder="Your Mobile">
+                    <input type="email" placeholder="Your Email">
+                    <input type="button" name="btnRegister">
+                </form>
+            </div>
+            <div class="d-flex justify-content-center">
+                <form name="frmLogin">
+                    <h3>Login</h3>
+                    <input type="text" placeholder="UserId">
+                    <input type="password" placeholder="password">
+                    <input type="button" name="btnLogin">
+                </form>
+            </div>
+</body>
+</html>

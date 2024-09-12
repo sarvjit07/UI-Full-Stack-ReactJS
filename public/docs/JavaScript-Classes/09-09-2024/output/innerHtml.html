@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>confirm()</title>
+    <title>innerHTML</title>
     <script>
         function DeleteClick(){
-            result=confirm("Delete Record\n Successfully");
+            result=confirm("Delete Record");
             if(result==true){
-                alert("Deleted...");
+                document.querySelector("p").innerHTML="<strong>Deleted Successfully</strong>";
             }
             else{
-                alert("Canceled...");
-            }
+            document.querySelector("p").textContent="Canceled";
         }
+    }
     </script>
 </head>
 <body>
     <button onclick="DeleteClick()">Delete</button>
+    <p></p>
 </body>
 </html>

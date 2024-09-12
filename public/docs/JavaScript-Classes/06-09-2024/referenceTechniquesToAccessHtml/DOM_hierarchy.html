@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Hierarchy</title>
+    <link rel="stylesheet" href="../../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        function LoadPage(){
+            window.document.images[0].src="./DOM_hierarchy.png";
+            window.document.forms[0].elements[2].value="Register";
+            window.document.forms[1].elements[2].value="Login";
+        }
+
+    </script>
+</head>
+<body onload="LoadPage()">
+        <div class="d-flex justify-content-center">
+            <img width="400" height="300" border="2" src="">
+        </div>
+            <div class="d-flex justify-content-center">
+                <form>
+                    <h3>Register</h3>
+                    <input type="text" placeholder="Your Mobile">
+                    <input type="email" placeholder="Your Email">
+                    <input type="button">
+                </form>
+            </div>
+            <div class="d-flex justify-content-center">
+                <form>
+                    <h3>Login</h3>
+                    <input type="text" placeholder="UserId">
+                    <input type="password" placeholder="password">
+                    <input type="button">
+                </form>
+            </div>
+</body>
+</html>
