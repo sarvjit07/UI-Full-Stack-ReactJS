@@ -6,21 +6,23 @@
     <title>getElementById</title>
     <link rel="stylesheet" href="../../../../../node_modules/bootstrap/dist/css/bootstrap.css">
     <script type="text/javascript">
-        function LoadPage(){
-            document.getElementById("poster").src="../../../../images/1.png";
+        function LoadPage() {
+            document.getElementById("poster").src = "../../../../images/1.png";
             document.getElementById("btnRegister").value = "Register";
             document.getElementById("btnLogin").value = "Login";
         }
     </script>
 </head>
 <body onload="LoadPage()">
-    <div class="d-flex justify-content-center mt-4" >
-        <img width="200" id="poster" name="poster" height="200" border="1" >
+    <div class="d-flex justify-content-center mt-4">
+        <img width="200" id="poster" name="poster" height="200" border="1">
     </div>
     <div class="d-flex justify-content-center">
         <form name="frmRegister">
             <h3>Register</h3>
-            <input type="text" placeholder="Your mobile"> <input type="email" placeholder="Your Email"> <input type="button" name="btnRegister" id="btnRegister">
+            <input type="text" placeholder="Your mobile"> 
+            <input type="email" placeholder="Your Email"> 
+            <input type="button" name="btnRegister" id="btnRegister">
         </form>
     </div>
     <div class="d-flex justify-content-center">
