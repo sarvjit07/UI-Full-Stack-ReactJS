@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../../node_modules/bootstrap/dist/css/bootstrap.css">
     <title>querySelector</title>
     <script>
         function LoadPage(){
             document.querySelector("img").src="../../../../images/5.png";
             document.querySelector("#btnRegister").value="Register"
-            document.querySelector(".btn").value="Login"
+            document.querySelector(".btnLogin").value="Login"
         }
     </script>
 </head>
 <body onload="LoadPage()">
-    <div>
+    <div class="d-flex justify-content-center mt-4">
         <img width="200" id="poster" name="poster" height="200" border="1" >
     </div>
-    <div>
+    <div class="d-flex justify-content-center mt-4">
         <form name="frmRegister">
             <h3>Register</h3>
             <input type="text" placeholder="Your mobile"> <input type="email" placeholder="Your Email"> <input type="button" name="btnRegister" id="btnRegister">
         </form>
     </div>
-    <div>
+    <div class="d-flex justify-content-center mt-4">
         <form name="frmLogin">
             <h3>Login</h3>
             <input type="text" placeholder="UserId">
             <input type="password" placeholder="Password">
-            <input type="button" name="btnLogin" class="btn" id="btnLogin">
+            <input type="button" class="btnLogin">
         </form>
     </div>
 </body>
