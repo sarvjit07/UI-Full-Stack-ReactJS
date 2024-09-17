@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+
+    <script>
+        window.onload = () => {
+            let button = document.querySelector("#btn");
+
+            // Function for calculating BMI
+            button.addEventListener("click", calculateBMI);
+        };
+
+        function calculateBMI() {
+            let height = parseInt(document.querySelector("#height").value);
+            let weight = parseInt(document.querySelector("#weight").value);
+            let result = document.querySelector("#result");
+
+            if (isNaN(height)) {
+                result.innerHTML = "Provide a valid Height!";
+            } else if (isNaN(weight)) {
+                result.innerHTML = "Provide a valid Weight!";
+            } else {
+                let bmi = (weight / ((height * height) / 10000)).toFixed(2);
+
+                if (bmi < 18.6) {
+                    result.innerHTML = `Under Weight : <span>${bmi}</span>`;
+                } else if (bmi >= 18.6 && bmi < 24.9) {
+                    result.innerHTML = `Normal : <span>${bmi}</span>`;
+                } else {
+                    result.innerHTML = `Over Weight : <span>${bmi}</span>`;
+                }
+            }
+        }
+    </script>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* Set background image */
+        body:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../../../images/bmi.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4; /* Adjust this value to change the opacity of the image */
+            z-index: -1;
+        }
+        .container {
+            max-width: 900px;
+            margin-top: 50px;
+            background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+            padding: 20px;
+            border-radius: 10px;
+           
+        }
+
+        .bmi-header {
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .bmi-subtitle {
+            font-size: 18px;
+            color: #777;
+        }
+
+        .card {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        .form-label {
+            font-weight: 600;
+        }
+
+        .form-control {
+            font-size: 18px;
+            padding: 15px;
+        }
+
+        #btn {
+            background-color: #007bff;
+            color: white;
+            font-size: 20px;
+            padding: 12px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .input-group-text {
+            background-color: #f8f9fa;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h1 class="bmi-header">Body Mass Index Calculator</h1>
+                <p class="bmi-subtitle">
+                    Better understand your weight in relation to your height using our body mass index (BMI) calculator.
+                    While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to
+                    evaluate your overall health and well-being.
+                </p>
+            </div>
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Enter your details below</h5>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="unit" id="metric" checked>
+                            <label class="form-check-label" for="metric">Metric</label>
+                        </div>
+   
+
+                        <div class="input-group mt-3">
+                            <input type="text" class="form-control" id="height" placeholder="0">
+                            <span class="input-group-text">cm</span>
+                        </div>
+                        <div class="input-group mt-3">
+                            <input type="text" class="form-control" id="weight" placeholder="0">
+                            <span class="input-group-text">kg</span>
+                        </div>
+
+                        <button id="btn" class="btn btn-primary w-100">Calculate</button>
+
+                        <div id="result" class="text-center mt-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
