@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>StringFormattingMethods</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
     <script>
         function ApplyClick(){
             var size = document.getElementById("txtSize").value;
@@ -23,7 +24,7 @@
         }
     </script>
 </head>
-<body>
+<body class="text-center mt-4">
     <dl>
         <dt>Font Size</dt>
         <dd><input type="number" min="1" max="7" value="3" id="txtSize"></dd>
@@ -40,6 +41,6 @@
     </dl>
     <button onclick="ApplyClick()"> Apply </button>
     <br><br>
-    <div id="msg">Sample Text</div>
+    <div id="msg" class="bg-primary text-white">Sample Text</div>
 </body>
 </html>
