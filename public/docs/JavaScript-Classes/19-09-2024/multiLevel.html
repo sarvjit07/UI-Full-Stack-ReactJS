@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multi-Level</title>
     <script>
-        function LoginClick() {
-            var userName = document.getElementById("txtName").value;
-            var password = document.getElementById("txtPwd").value;
-            var msg = document.getElementById("msg");
+        function LoginClick(){
+            var userName=document.getElementById("txtName").value;
+            var password=document.getElementById("txtPwd").value;
+            var msg=document.getElementById("msg");
 
-            if (userName === "") {
-                msg.innerHTML = "User Name Required".fontcolor('red');
-            } else {
-                if (userName === "Sarvjit") {
-                    if (password === "") {
-                        msg.innerHTML = "Password Required".fontcolor('red');
-                    } else {
-                        if (password === "john11") {
+            if(userName===""){
+                msg.innerHTML="User Name Required".fontcolor('red');
+            }else{
+                if(userName==="Sarvjit"){
+                    if(password===""){
+                        msg.innerHTML="Password Required".fontcolor('red');
+                    }else{
+                        if(password==="john11"){
                             document.write("<h2>Login Success..</h2>");
-                        } else {
-                            msg.innerHTML = "Invalid Password".fontcolor('red');
+                        }else{
+                            msg.innerHTML="Invalid Password".fontcolor('red');
                         }
                     }
-                } else {
-                    msg.innerHTML = "User Name Invalid".fontcolor('red');
+                } else{
+                     msg.innerHTML="User Name Invalid".fontcolor('red');  
+                    }
+                   
                 }
-
             }
-        }
     </script>
 </head>
-
 <body>
     <h3>User Login</h3>
     <dl>
@@ -44,5 +42,4 @@
     <button onclick="LoginClick()">Login</button>
     <p align="center" id="msg"></p>
 </body>
-
 </html>
