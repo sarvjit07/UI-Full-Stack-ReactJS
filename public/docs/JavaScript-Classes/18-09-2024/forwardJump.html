@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Payment Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <script>
         function VerifyCard(){
             var card=document.getElementById("txtCard").value;
             if(card==="545488154885158"){
-                
                 document.getElementById("txtCvv").disabled=false;
-                document.getElementById("msg").innerHTML="Please Input CVV"
-
+         
             }
         }
         function VerifyCvv(){
             var cvv=document.getElementById("txtCvv").value;
-
-            if(cvv==="7298"){
+            if(cvv==="729"){
                 document.getElementById("lstExpiry").disabled=false;
             }
         }
@@ -27,28 +27,93 @@
                 document.querySelector("button").disabled=false;
             }
         }
+
+        // New Payment function to show success message
         function Payment(){
-            document.write("Payment Successfully. Thank You 💕")
+            // Hide the form and show the success message
+            document.getElementById("paymentForm").style.display = 'none';
+            document.getElementById("successMessage").style.display = 'flex';
         }
     </script>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .payment-btn {
+            width: 100%;
+        }
+        #successMessage {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #155724;
+            font-size: 20px;
+            height: 200px;
+            width: 400px;
+        }
+    </style>
 </head>
 <body>
-    <dl>
-        <dt>Card</dt>
-        <dd><input type="text" id="txtCard" onblur="VerifyCard()"></dd>
-        
-        <dt>Cvv</dt>
-        <dd><input type="text" id="txtCvv" onblur="VerifyCvv()" size="4" disabled></dd>
-        <dt>Expiry</dt>
-        <dd>
-            <select disabled id="lstExpiry" onchange="VerifyExpiry()">
-                <option>Select Expiry</option>
-                <option>2024</option>
-                <option>2025</option>
-                <option>2026</option>
-            </select>
-        </dd>
-    </dl>
-    <button disabled id="Payment" onclick="Payment()">Pay</button>
+
+    <!-- Payment Form -->
+    <div class="card border-success" id="paymentForm">
+        <div class="card-body">
+            <h5 class="card-title text-center bg-warning border-4 rounded-3 p-1">Payment Details</h5>
+            <p class="text-muted text-center mb-4">Total - INR 1500/month</p>
+
+
+            <div class="mb-3">
+                <label for="txtCard" class="form-label">Card Number</label>
+                <input type="text" class="form-control" id="txtCard" placeholder="Enter card number" onblur="VerifyCard()">
+            </div>
+
+            <div class="mb-3">
+                <label for="txtCvv" class="form-label">CVV</label>
+                <input type="text" class="form-control" id="txtCvv" placeholder="3 digits" size="4" onblur="VerifyCvv()" disabled>
+            </div>
+
+            <div class="mb-3">
+                <label for="lstExpiry" class="form-label">Expiry Date</label>
+                <select class="form-select" id="lstExpiry" disabled onchange="VerifyExpiry()">
+                    <option>Select Expiry</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                </select>
+            </div>
+
+  
+
+            <button disabled id="Payment" class="btn btn-success payment-btn" onclick="Payment()">Pay Now</button>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="successMessage">
+        <h3>Payment Successful!</h3>
+        <p>Thank you for your payment 💕</p>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
