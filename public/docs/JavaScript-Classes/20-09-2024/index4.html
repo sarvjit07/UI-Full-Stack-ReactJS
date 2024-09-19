@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triangle Angle Type Checker</title>
+
+  <script>
+    function triangleAngleType() {
+      // Get the input values for the angles
+      const angle1 = parseInt(document.getElementById('angle1').value);
+      const angle2 = parseInt(document.getElementById('angle2').value);
+      const angle3 = parseInt(document.getElementById('angle3').value);
+
+      let resultText = "";
+
+      // Check if the sum of the angles equals 180 degrees (to verify it's a valid triangle)
+      if (angle1 + angle2 + angle3 !== 180) {
+        resultText = "Invalid Triangle: The sum of angles must be 180°.";
+      } else {
+        // Check for an acute triangle (all angles < 90)
+        if (angle1 < 90 && angle2 < 90 && angle3 < 90) {
+          resultText = "Acute Triangle.";
+        }
+        // Check for a right triangle (one angle = 90)
+        else if (angle1 === 90 || angle2 === 90 || angle3 === 90) {
+          resultText = "Right Triangle.";
+        }
+        // Check for an obtuse triangle (one angle > 90)
+        else if (angle1 > 90 || angle2 > 90 || angle3 > 90) {
+          resultText = "Obtuse Triangle.";
+        }
+      }
+
+      // Display the result on the page
+      document.getElementById('result').innerHTML = resultText;
+    }
+  </script>
+</head>
+<body>
+  <h2>Triangle Angle Type Checker</h2>
+
+  <label>Enter Angle 1 (in degrees):</label>
+  <input type="number" id="angle1" step="any"><br><br>
+  
+  <label>Enter Angle 2 (in degrees):</label>
+  <input type="number" id="angle2" step="any"><br><br>
+  
+  <label>Enter Angle 3 (in degrees):</label>
+  <input type="number" id="angle3" step="any"><br><br>
+
+  <button onclick="triangleAngleType()">Check Triangle Type</button>
+
+  <h3>Result:</h3>
+  <p id="result"></p>
+
+</body>
+</html>
