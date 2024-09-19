@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triangle Type and Area Checker</title>
+
+  <script>
+    function triangleTypeAndArea() {
+      // Get the input values from the user
+      const side1 = parseInt(document.getElementById('side1').value);
+      const side2 = parseInt(document.getElementById('side2').value);
+      const side3 = parseInt(document.getElementById('side3').value);
+      
+      let resultText = "";
+      let area = 0;
+
+      // Check for triangle type using only if-else conditions
+      if (side1 === side2) {
+        if (side2 === side3) {
+          // Equilateral triangle
+          resultText = "Equilateral Triangle.";
+          area = (Math.sqrt(3) / 4) * side1 * side1;
+        } else {
+          // Isosceles triangle where side1 == side2
+          resultText = "Isosceles Triangle.";
+          const base = side3;
+          const height = Math.sqrt(side1 * side1 - (base * base / 4)); // Height for isosceles
+          area = (1 / 2) * base * height;
+        }
+      } else if (side1 === side3) {
+        // Isosceles triangle where side1 == side3
+        resultText = "Isosceles Triangle.";
+        const base = side2;
+        const height = Math.sqrt(side1 * side1 - (base * base / 4));
+        area = (1 / 2) * base * height;
+      } else if (side2 === side3) {
+        // Isosceles triangle where side2 == side3
+        resultText = "Isosceles Triangle.";
+        const base = side1;
+        const height = Math.sqrt(side2 * side2 - (base * base / 4));
+        area = (1 / 2) * base * height;
+      } else {
+        // Scalene triangle, use Heron's formula
+        const s = (side1 + side2 + side3) / 2; // Semi-perimeter
+        area = Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+        resultText = `Scalene Triangle.`;
+      }
+
+      // Add the area to the result text
+      resultText += ` Area: ${area}`;
+
+      // Display the result on the page
+      document.getElementById('result').innerHTML = resultText;
+    }
+  </script>
+</head>
+<body>
+  <h2>Triangle Type and Area Checker</h2>
+  
+  <label>Enter length of side 1:</label>
+  <input type="number" id="side1" step="any"><br><br>
+  
+  <label>Enter length of side 2:</label>
+  <input type="number" id="side2" step="any"><br><br>
+  
+  <label >Enter length of side 3:</label>
+  <input type="number" id="side3" step="any"><br><br>
+  
+  <button onclick="triangleTypeAndArea()">Check Triangle Type and Area</button>
+
+  <h3>Result:</h3>
+  <p id="result"></p>
+
+</body>
+</html>
