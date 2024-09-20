@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1() {
+            var n = parseInt(prompt("Enter Number"));
+            switch (n) {
+                case 1:
+                    document.write("One");
+                    break;
+                case 2:
+                    document.write("Two");
+                    return;
+                case 2:
+                    document.write("This is also two");
+                    break;
+                case 1:
+                    document.write("This is also One");
+                    break;
+                default:
+                    document.write("Please enter value between 1 to 2");
+                    break;
+            }
+        }
+        f1();
+    </script>
+</head>
+
+<body>
+    <h1>NOTE:===> See how return & break would be work </h1>
+    <P>
+        To Debug: <BR></BR>
+        1. Right Click in browser <BR></BR>
+        2. Select Inspect <BR></BR>
+        3. Go to "Sources" category <BR></BR>
+        4. Select HTML page from sources <BR></BR>
+        5. Click at specific line number to set a "break-point". <BR></BR>
+        6. Reload the page to start compiling in debug mode. <BR></BR>
+        7. use "F10" function key [fn + f10] to move to next step. <BR></BR>
+    </P>
+</body>
+
+</html>
