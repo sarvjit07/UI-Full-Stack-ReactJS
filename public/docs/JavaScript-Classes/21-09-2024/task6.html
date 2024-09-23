@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task6-Program</title>
+    <script>
+        // Check triangle type
+        function findTriangleType(side1,side2,side3){
+            if(side1==side2){
+            if (side2==side3){
+                    document.write("Equitateral Triangle <br>");
+                }else{
+                    document.write("Isosceles Triangle <br>");
+                }
+            }
+            else if(side1==side3){
+                document.write("Isosceles <br>");
+            }else if(side2==side3){
+                document.write("Isosceles <br>");
+            }else{
+                document.write("Scalene Triangle <br>");
+            }
+        }
+
+        findTriangleType(12,12,12);
+        findTriangleType(12,12,34);
+        findTriangleType(5,3,6);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
