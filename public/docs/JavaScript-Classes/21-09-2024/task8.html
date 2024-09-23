@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task8-Program</title>
+    <!-- <script>
+        function findChar(char){
+            if(char.charCodeAt(0)>=69 && char.charCodeAt(0)<=77){
+                document.write(`Your char ${char} is in range of E to M`);
+            }else{
+                document.write( `Your char is not in range of M to E`);
+            }
+        }
+        findChar("F");
+    </script> -->
+
+    <script>
+
+        // Find given char is b/w "E to M"
+        // through Regular Expression
+        function findChar(char){
+            var regExp=/[E-M]/;
+            if (char.match(regExp)){
+                document.write(`Your char ${char} is in range of E to M`);
+            }else{
+                document.write( `Your char is not in range of M to E`);
+            }
+        }
+        findChar("G")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
