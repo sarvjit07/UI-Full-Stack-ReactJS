@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array-Spread-Operator</title>
+    <script>
+        var cal1 = [10, 20, 30];
+
+        // Without Spread Operator
+        
+        // var cal3 = cal1;
+        // cal3[0]=34;
+        // console.log(cal1);
+        // console.log(cal3);
+
+
+        // Array Spread Operator
+        var cal2 = [...cal1];
+        cal2[0]=50;
+        console.log(cal1);
+        console.log(cal2);
+
+
+        var col1=[10,20,30];
+        var col2=[col1];
+        console.log(col2.length)
+        var col2=[...col1];
+        console.log(col2.length);
+        var col2=[col1,40];
+        console.log(col2.length);
+        var col2=[...col1,40];
+        console.log(col2.length);
+        var col2=[...col1,...[40,50]];
+        console.log(col2.length);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
