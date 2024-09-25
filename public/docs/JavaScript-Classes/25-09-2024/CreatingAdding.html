@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating and Adding elements into Page</title>
+    <script>
+        // Creating img element and Adding in Page 
+        function UploadClick(){
+            var pic = document.createElement("img");
+            pic.src="../../../images/women.jpg";
+            pic.height="200";
+            pic.width="200";
+
+            document.querySelector("figure").appendChild(pic);
+
+        }
+
+        // Creating h1 heading through JavaScript Logic and Adding on Page 
+        function bodyload(){
+            var heading =document.createElement("h1");
+            heading.innerHTML="Hello!"
+            document.querySelector("body").appendChild(heading)
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <button onclick="UploadClick()">Upload</button>
+    <figure>
+        
+
+    </figure>
+</body>
+</html>
