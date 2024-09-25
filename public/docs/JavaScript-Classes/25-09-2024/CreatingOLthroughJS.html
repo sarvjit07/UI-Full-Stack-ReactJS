@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Adding Ordered Lists through JS</title>
+    <script>
+        function GenerateClick(){
+            document.getElementById("container").innerHTML="";
+
+            var ol=document.createElement("ol");
+            ol.type="a";
+
+            var item1=document.createElement("li")
+            var item2=document.createElement("li")
+
+            item1.innerHTML="HTML";
+            item2.innerHTML="JavaScript";
+
+            ol.appendChild(item1)
+            ol.appendChild(item2)
+
+            document.getElementById("container").appendChild(ol);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="GenerateClick()">Generate</button>
+    <div id="container">
+
+    </div>
+</body>
+</html>
