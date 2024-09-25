@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Adding Table through JS</title>
+    <script>
+        function GenereteClick(){
+            var table=document.createElement("table");
+            var thead=document.createElement("thead");
+            var tr=document.createElement("tr");
+            var th=document.createElement("th");
+
+            var tbody=document.createElement("tbody");
+            var tr1=document.createElement("tr");
+            var td=document.createElement("td");
+
+            table.border="1";
+            th.innerHTML="Name";
+            td.innerHTML="Samsung";
+
+            tr.appendChild(th);
+            tr1.appendChild(td);
+
+            thead.appendChild(tr);
+            tbody.appendChild(tr1);
+
+            table.appendChild(thead);
+            table.appendChild(tbody);
+
+            document.getElementById("conatainer").appendChild(table);
+        }
+    </script>
+
+</head>
+<body>
+    <button style="margin: 100px 250px; color: tomato;" onclick="GenereteClick()">Generate</button>
+    <div id="conatainer">
+
+    </div>
+</body>
+</html>
