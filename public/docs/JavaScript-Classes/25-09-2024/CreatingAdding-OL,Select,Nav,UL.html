@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreatingAdding-OL,Select,Nav,UL</title>
+    <script>
+        var categories=["All","Fashion","Footwear","Electronics"];
+
+        function GenerateClick(){
+
+            document.querySelector("ol").innerHTML="";
+            document.querySelector("select").innerHTML="";
+
+            categories.map(function(category){
+                var li=document.createElement("li");
+                li.innerHTML=category;
+                document.querySelector("ol").appendChild(li);
+
+                var option=document.createElement("option");
+                option.text=category;
+                option.value=category;
+                document.querySelector("select").appendChild(option);
+
+                var span=document.createElement("span");
+                span.innerHTML=`<a href="${category}"> ${category}</a>`;
+                document.querySelector("nav").appendChild(span);
+
+                var ul_li=document.createElement("li");
+                var input=document.createElement("input");
+                input.type="checkbox";
+                input.value=category;
+
+                var label=document.createElement("label");
+                label.innerHTML=category;
+
+                ul_li.appendChild(input);
+                ul_li.appendChild(label);
+
+                document.querySelector("ul").appendChild(ul_li);
+
+            })
+        }
+    </script>
+</head>
+<body>
+    <button onclick="GenerateClick()">Generate</button>
+    <ol>
+
+    </ol>
+    <select>
+
+    </select>
+    <br><br>
+    <nav>
+
+    </nav>
+    <ul style="list-style: none;">
+
+    </ul>
+</body>
+</html>
