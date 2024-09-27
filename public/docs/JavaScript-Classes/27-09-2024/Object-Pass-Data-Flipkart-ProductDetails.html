@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-Pass-Data-Flipkart-ProductDetails</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        var product = {
+            title: "Apple iPhone 15 (Blue, 128 GB)",
+            price: 54999,
+            rating: { rate: 4.6, ratings: 53244, reviews: 3456 },
+            offers: [
+                "Bank Offer 5% Unlimited Cashback on Flipkart Axis Bank Credit Card T&C",
+                "Bank Offer 10% off up to ₹3000 on HDFC Bank Credit Card Transactions. Min Txn Value: ₹30,000 T&C",
+                "Bank Offer 10% off up to ₹4000 on HDFC Bank Credit Card EMI Transactions. Min Txn Value: ₹30,000 T&C",
+                "Special PriceGet extra ₹14901 off (price inclusive of cashback/coupon) T&C"
+            ],
+            image:"../../../images/iphone-blue.jpg"
+        }
+        function bodyload() {
+            document.getElementById("imgPic").src = product.image;
+            document.getElementById("lblTitle").innerHTML=product.title;
+            document.getElementById("lblPrice").innerHTML=product.price.toLocaleString('en-in',{style:'currency',currency:'INR'});
+            document.getElementById("lblRating").innerHTML=`<span class="bg-success fs-6 rounded rounded-2 p-1">${product.rating.rate}<span class="ps-1 bi bi-star-fill"></span></span><span class="ps-2 fs-7 text-secondary fw-bold">${product.rating.ratings.toLocaleString()} rating & ${product.rating.reviews.toLocaleString()} reviews</span>`;
+
+            product.offers.map(function(offer){
+                var li=document.createElement("li");
+                li.className="bi bi-tag-fill my-2 text-success";
+                li.innerHTML=`<span class="text-secondary">${offer}</span>`;
+                document.getElementById("offers").appendChild(li);
+            })
+        }
+    </script>
+</head>
+
+<body class="container-fluid" onload="bodyload()">
+    <div class="row" id="productContainer">
+        
+        <div class="col-4">
+            <img id="imgPic" width="100%">
+        </div>
+        <div class="col-8">
+            <div id="lblTitle" class="mt-4 fs-4 fw-bold"></div>
+            <div id="lblRating" class="my-3 text-white"></div>
+            <div class="my-1 h2" id="lblPrice">
+
+            </div>
+            <h6 class="mt-3">Available Offers</h6>
+            <ul id="offers" class="list-unstyled mt-4">
+
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
