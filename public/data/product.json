@@ -1,0 +1,52 @@
+[
+    {
+        "title" : "iPhone Black (128 GB)",
+        "price": 65999,
+        "image": "../../../../images/iphone-black.jpg",
+        "rate": {"rating":4.5, "ratings":54320, "reviews": 4502},
+        "offers": [
+            "Bank Offer 5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C",
+            "Bank Offer 10% off up to ₹3000 on HDFC Bank Credit Card Transactions. Min Txn Value: ₹30,000T&C",
+            "Bank Offer 10% off up to ₹4000 on HDFC Bank Credit Card EMI Transactions. Min Txn Value: ₹30,000T&C",
+            "Special PriceGet extra ₹14901 off (price inclusive of cashback/coupon)T&C"
+        ]
+    },
+    {
+        "title" : "iPhone Blue (256 GB)",
+        "price": 75999,
+        "image": "../../../../images/iphone-blue.jpg",
+        "rate": {"rating":4.6, "ratings":24320, "reviews": 1502},
+        "offers": [
+            "Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C",
+            "Bank Offer10% off up to ₹3000 on HDFC Bank Credit Card Transactions. Min Txn Value: ₹30,000T&C",
+            "Bank Offer10% off up to ₹4000 on HDFC Bank Credit Card EMI Transactions. Min Txn Value: ₹30,000T&C",
+            "Special PriceGet extra ₹14901 off (price inclusive of cashback/coupon)T&C"
+        ]
+    },
+    {
+        "title" : "iPhone Pink (256 GB)",
+        "price": 55999,
+        "image": "../../../../images/iphone-pink.png",
+        "rate": {"rating":4.6, "ratings":24320, "reviews": 1502},
+        "offers": [
+            "Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C",
+            "Bank Offer10% off up to ₹3000 on HDFC Bank Credit Card Transactions. Min Txn Value: ₹30,000T&C",
+            "Bank Offer10% off up to ₹4000 on HDFC Bank Credit Card EMI Transactions. Min Txn Value: ₹30,000T&C",
+            "Special PriceGet extra ₹14901 off (price inclusive of cashback/coupon)T&C"
+        ]
+    },
+    {
+        "title" : "iPhone Green (256 GB)",
+        "price": 82000,
+        "image": "../../../../images/iphone-green.png",
+        "rate": {"rating":4.6, "ratings":24320, "reviews": 1502},
+        "offers": [
+            "Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C",
+            "Bank Offer10% off up to ₹3000 on HDFC Bank Credit Card Transactions. Min Txn Value: ₹30,000T&C",
+            "Bank Offer10% off up to ₹4000 on HDFC Bank Credit Card EMI Transactions. Min Txn Value: ₹30,000T&C",
+            "Special PriceGet extra ₹14901 off (price inclusive of cashback/coupon)T&C"
+        ]
+    }
+
+
+]

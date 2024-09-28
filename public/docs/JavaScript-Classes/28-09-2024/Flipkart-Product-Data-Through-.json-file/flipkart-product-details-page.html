@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filpkart-Product-Details-Through-JsonFile</title>
+    <link rel="stylesheet" href="../../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function BodyLoad() {
+            var products = [];
+
+            var http = new XMLHttpRequest();
+            http.open("get", "../../../../data/product.json", true);
+            http.send();
+
+            http.onreadystatechange = function () {
+                if (http.readyState === 4) {
+                    products = JSON.parse(http.responseText);
+
+                    products.map(function (product) {
+                        var div = document.createElement("div");
+
+                        div.className = "row my-5";
+                        div.innerHTML =
+                            `<div class="col-3">
+                            <img class="ms-3" src=${product.image} width="100%">
+                        </div>
+                        <div class="col-9">
+                            <div class="fs-5 fw-bold">${product.title}</div>
+                        
+                        <div>
+                        <span class="badge bg-success text-white p-1">${product.rate.rating}<span class=" ms-1 bi bi-star-fill"></span></span>
+                        <span class="text-secondary fw-bold ms-1">${product.rate.ratings} ratings & ${product.rate.reviews} reviews</span>
+                        </div>
+                        <div class="mt-2 fw-bold">
+                            ${product.price.toLocaleString('en-in', { style: 'currency', currency: 'INR' })}
+                        </div>
+                        <div class="my-3">
+                        <h6>Available Offers</h6>
+                         <ol id="offers-list" class="list-unstyled mt-3"></ol>
+                        
+                        </div>
+                        </div>
+                        `;
+
+                        var ol = div.querySelector("#offers-list");
+                        product.offers.map(function (offer) {
+                            var li = document.createElement("li");
+                            li.className="bi bi-tag-fill my-2 text-success";
+                            li.innerHTML=`<span class="ms-2 text-secondary">${offer}</span>`;
+                            ol.appendChild(li);
+                        });
+
+                        document.querySelector("section").appendChild(div);
+                    })
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="container-fluid" onload="BodyLoad()">
+    <section>
+
+    </section>
+</body>
+
+</html>
