@@ -1,0 +1,12 @@
+            JavaScript AJAX
+
+- Asynchronous JavaScript And XML.
+- Async uses "un-blocking" technique, 
+- where it can perform the given task without blocking the other tasks in process.
+- AJAX enables partial postback.
+- It allows to add new content into page without reloading the page.
+- It can submit only specific portion of page.
+- JavaScript provides the actions for AJAX.
+- XML is the language format for data in AJAX.
+- Browser uses "XMLHttpRequest" object for AJAX requests.
+- It is a "window" object use to make AJAX calls.
