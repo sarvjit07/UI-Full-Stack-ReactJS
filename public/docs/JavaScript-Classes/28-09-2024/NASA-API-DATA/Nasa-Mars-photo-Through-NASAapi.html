@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasa-Mars-photo-Through-NASAapi</title>
+    <link rel="stylesheet" href="../../../../..//node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function bodyload(){
+            var marsObj={};
+            var http =new XMLHttpRequest();
+            http.open("get","https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=eC4QpNzh362mOJvgEyHgtJB2LPDdJePcA4HkB4p6",true);
+            http.send();
+
+            http.onreadystatechange=function(){
+                if(http.readyState===4){
+                    marsObj=JSON.parse(http.responseText);
+                    marsObj.photos.map(function(item){
+                        var tr=document.createElement("tr");
+                        var tdId=document.createElement("td");
+                        var tdImage=document.createElement("td");
+                        var tdCamera=document.createElement("td");
+                        var tdRover=document.createElement("td");
+
+                        tdId.innerHTML=item.id;
+                        tdImage.innerHTML=`<a href=${item.img_src} target="_blank"><img width="150" height="100" src=${item.img_src}></a>`;
+                        tdCamera.innerHTML=item.camera.full_name;
+                        tdRover.innerHTML=item.rover.name;
+
+                        tr.appendChild(tdId);
+                        tr.appendChild(tdImage);
+                        tr.appendChild(tdCamera);
+                        tr.appendChild(tdRover);
+
+                        document.querySelector("tbody").appendChild(tr);
+                    })
+                }
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+    <h2 class="text-center mb-4 mt-4">Mars Rover Photos</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr class="position-sticky top-0">
+                <th>Photo Id</th>
+                <th>Preview</th>
+                <th class="bi bi-camera"> Camera</th>
+                <th class="bi bi-rocket"> Rover</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    
+</body>
+</html>
