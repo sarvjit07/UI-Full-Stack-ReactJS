@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access-All-Key-From-Object-Object.keys()</title>
+    <script>
+        var product={
+            Id:1,
+            Name:"Samsung TV",
+            Price:549000.33,
+            Stock:true
+        }
+        Object.keys(product).map(function(key){
+            document.write(`${key}:${product[key]}<br>`);
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
