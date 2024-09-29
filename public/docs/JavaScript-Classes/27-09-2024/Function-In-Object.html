@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function-In-Object-and-Take-Input-from-prompt</title>
+    <script>
+        var product={
+            Name:"TV",
+            Price:40000.44,
+            Qty:3,
+            Total:function(){
+                return this.Qty*this.Price;
+            },
+            Print:function(){
+                document.write(`Name=${this.Name}<br>Price=${this.Price}<br>Qty=${this.Qty}<br>Total Price=${this.Total()}`);
+            }
+        }
+        product.Name=prompt("Enter Name of Product");
+        product.Qty=parseInt(prompt("Enter Quantity"));
+        product.Print();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
