@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeStore.com</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript">
+        function LoadCategories(){
+            fetch("https://fakestoreapi.com/products/categories")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(categories){
+                categories.unshift("all");
+                categories.map(function(category){
+                    var option=document.createElement("option");
+                    option.text=category.toUpperCase();
+                    option.value=category;
+                    document.getElementById("lstCategories").appendChild(option);
+                })
+            })
+        }
+        
+        function LoadProducts(url){
+            document.querySelector("main").innerHTML="";
+            fetch(url)
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(products){
+                products.map(function(product){
+
+                    var div=document.createElement("div");
+                    div.className="card m-2 p-2";
+                    div.style.width="210px";
+                    div.innerHTML=`
+                    <img src=${product.image} class="card-img-top" height="120">
+                    <div class="card-header overflow-hidden" style="height:100px">
+                        ${product.title}
+                    </div>
+                    <div class="card-body">
+                        <dl>
+                            <dt>Price</dt>
+                            <dd>${product.price}</dd>
+                            <dt>Rating</dt>
+                            <dd>${product.rating.rate}<span class="ps-2 bi bi-star-fill text-success"></span>
+                                [${product.rating.count}]</dd>
+                        </dl>
+                        <div class="card-footer"> 
+                            <button class="w-100 btn btn-warning bi bi-cart4">Add to Cart</button>
+                        </div>
+                    </div>
+                    `;
+                    document.querySelector("main").appendChild(div);
+                })
+            })
+        }
+
+        function bodyload(){
+            LoadCategories();
+            LoadProducts("https://fakestoreapi.com/products")
+        }
+
+        function CategoryChange(){
+            var categoryname=document.getElementById("lstCategories").value;
+            if(categoryname==="all"){
+                LoadProducts("https://fakestoreapi.com/products");
+            }else{
+                LoadProducts(`https://fakestoreapi.com/products/category/${categoryname}`)
+            }
+        }
+
+
+        function SearchClick(){
+            var categoryName=document.getElementById("txtSearch").value;
+            fetch("https://fakestoreapi.com/products/categories")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(categories){
+                if(categories.indexOf(categoryName)===-1){
+                    alert(`${categoryName} Not Found`);
+                }else{
+                    LoadProducts(`https://fakestoreapi.com/products/category/${categoryName.toLowerCase()}`);
+                }
+            })
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+    <header class="d-flex justify-content-between p-3 border border-1 mt-1 bg-dark text-white position-sticky top-0 z-1">
+        <div class="fs-4 fw-bold">Fakestore</div>
+        <div>
+            <div class="input-group">
+                <input type="text" id="txtSearch" class="form-control" placeholder="Search on Fakestore">
+                <button onclick="SearchClick()" class="btn btn-warning bi bi-search"></button>
+            </div>
+        </div>
+        <div>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart mx-3"></span>
+            <button class=" bi bi-cart4 bg-dark text-white border-0 position-relative me-3"><span class="position-absolute badge bg-danger rounded rounded-circle">0</span></button>
+        </div>
+    </header>
+    <section class="row mt-2">
+        <nav class="col-2">
+            <label class="form-label fw-bold position-sticky p-5 top-50 z-1">Select Category</label>
+            <div class="position-sticky top-50 z-1">
+                <select id="lstCategories" onchange="CategoryChange()" class="form-select"></select>
+            </div>
+        </nav>  
+        <main class="col-10 d-flex flex-wrap" >
+
+        </main>
+    </section>
+    
+</body>
+</html>
