@@ -1,0 +1,16 @@
+
+         JavaScript Fetch Promise
+Issues with XMLHttpRequest:
+- It is synchronous implicitly.
+- You have to configure explicit asynchronous.
+- It returns response in text format.
+- Response in text is not safe, can be infected with virus.
+- Explicit conversions are required.
+
+          Solution:
+- JavaScript E5+ version provides Promise function.
+- Promise is async implicitly.
+- It returns the data in binary format.
+- It is easy to transport data in network.
+- However it also requires explicit conversion.
+- It is better in error handling.
