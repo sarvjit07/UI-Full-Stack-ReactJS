@@ -1,0 +1,14 @@
+<script>
+    var products = [
+        {Name: "TV", Price : 45000},
+        {Name: "Watch", Price: 2000},
+        {Name: "Mobile", Price: 12000}
+    ]
+    // write logic to print total of all products price
+    var total = 0;
+    products.map(function(product){
+        // total= total+product.Price;
+        total+=product.Price;
+    })
+    document.write(total);
+</script>

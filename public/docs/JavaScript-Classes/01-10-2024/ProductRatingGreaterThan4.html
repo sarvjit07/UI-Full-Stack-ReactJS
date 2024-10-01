@@ -1,0 +1,18 @@
+<script>
+    var products = [
+        {Name: "TV", Price : 45000, Rating:{rate:4.2}},
+        {Name: "Watch", Price: 2000, Rating:{rate:2.4}},
+        {Name: "Mobile", Price: 12000, Rating:{rate:4.6}},
+        {Name: "SmartWatch", Price: 6000, Rating:{rate:4.0}}
+
+
+    ]
+    // write logic to print all product names with rating 4 above
+
+    products.filter(function(product){
+        return product.Rating.rate>=4;
+    }).map(function(product){
+        document.write(product.Name+"<br>")
+    })
+ 
+</script>

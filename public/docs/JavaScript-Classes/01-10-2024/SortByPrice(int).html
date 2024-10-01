@@ -1,0 +1,15 @@
+<script>
+    var products = [
+        {Name: "TV", Price : 45000, Rating:{rate:4.2}},
+        {Name: "Watch", Price: 2000, Rating:{rate:4.4}},
+        {Name: "Mobile", Price: 12000, Rating:{rate:2.6}}
+    ]
+    // write logic to print all product names in ascending order of price
+
+    products.sort(function(a,b){
+        return a.Price-b.Price;
+    });
+    products.map(function(product){
+        document.write(`${product.Price},${product.Name} <br>`);
+    })
+</script>
