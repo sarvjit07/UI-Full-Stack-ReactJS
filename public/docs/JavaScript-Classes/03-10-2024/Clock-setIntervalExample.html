@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+    <script>
+        function Timer() {
+            var now = new Date();
+            document.querySelector("p").innerHTML = now.toLocaleTimeString();
+        }
+
+        function displayDate() {
+            var today = new Date();
+            document.querySelector("h1").innerHTML = today.toLocaleDateString();
+        }
+
+        function bodyload() {
+            setInterval(Timer, 1000);
+            displayDate(); // Show the date immediately on page load
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <p align="center" style="font-size: 100px; margin-bottom: 20px;"></p>
+    <h1 align="center" style="font-size: 80px; color: rgb(31, 126, 112);"></h1>
+</body>
+</html>
