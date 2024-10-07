@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print_Key_and_Value</title>
+    <script>
+        function PrintCollection(collection){
+            //Method
+            // using map function
+            // collection.map(function(value,key){
+            //     document.write(`[${key}] ${value}<br>`);
+            // })
+
+            //Method
+            // using for..in
+            // for(var key in collection){
+            //     document.write(`[${key}] ${collection[key]}<br>`)
+            // }
+
+            var size=collection.length;
+            for(var i=0;i<size;i++){
+                document.write(`[${i}] ${collection[i]} <br>`);
+            }
+        }
+        PrintCollection(["A","B","C"]); 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
