@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title_Case</title>
+    <script>
+        function TitleCase(str){
+            var words=str.split(" ");
+            var titleCaseWord=words.map(function(words){
+                return words.charAt(0).toUpperCase()+words.slice(1).toLowerCase();
+            });
+            var result=titleCaseWord.join(" ");
+            document.write(result);
+        }
+        TitleCase("weLcoME tO JAVAscript");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
