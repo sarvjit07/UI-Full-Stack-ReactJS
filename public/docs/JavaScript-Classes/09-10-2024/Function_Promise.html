@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var FetchAPI = new Promise(function(resolve, reject){
+             var url = prompt("Enter API Url");
+             if(url==="https://fakestore"){
+                 resolve([{Name:"TV"}, {Name:"Mobile"}, {Name:"Watch"}]);
+             } else {
+                 reject("Error: Unable to fetch data");
+             }
+        })
+   
+        FetchAPI.then(function(response){
+             var now = new Date();
+             console.log(now.toLocaleTimeString());
+             console.log(response);
+        })
+        .then(function(){
+             var now = new Date();
+             console.log(now.toLocaleTimeString());
+             console.log("Read Completed");
+        })
+        .then(function(){
+               var now = new Date();
+               console.log(now.toLocaleTimeString());
+             console.log("Presentation Completed");
+        })
+        .catch(function(error){
+             console.log(error);
+        })
+        .finally(function(){
+            console.log("Program End");
+        })
+   </script>
+</head>
+<body>
+    
+</body>
+</html>
