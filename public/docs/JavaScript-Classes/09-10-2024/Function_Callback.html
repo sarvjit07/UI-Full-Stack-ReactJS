@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Document</title>
+    <script>
+        function FetchAPI(url, success, failure)
+        {
+            
+            if(url === "https://fakestore") {
+                function OK(){
+                    document.write("Response OK<br>");
+                }
+                OK();
+                success("Response Data from Fakestore");
+            } else {
+                failure("Error: Unable to connect with API");
+            }
+        }
+    
+        FetchAPI(prompt("Enter API Url"), function(response){
+            document.write(response);
+        }, function(error){
+            document.write(error);
+        });
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>
