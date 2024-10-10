@@ -6,25 +6,22 @@
     <title>Document</title>
     <title>Document</title>
     <script>
-        function FetchAPI(url, success, failure)
-        {
-            
-            if(url === "https://fakestore") {
+        function FetchAPI(url,success,failure){
+            if(url=="https://fakestore"){
                 function OK(){
-                    document.write("Response OK<br>");
+                    document.write("Response OK <br>");
                 }
                 OK();
                 success("Response Data from Fakestore");
-            } else {
+            }else{
                 failure("Error: Unable to connect with API");
             }
         }
-    
-        FetchAPI(prompt("Enter API Url"), function(response){
+        FetchAPI(prompt("Enter API Url"),function(response){
             document.write(response);
-        }, function(error){
+        },function(error){
             document.write(error);
-        });
+        })
     </script>
     
 </head>
