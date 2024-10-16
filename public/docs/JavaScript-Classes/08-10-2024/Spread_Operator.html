@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread_Operator</title>
+    <script>
+        function Details(id,name,price,stock){
+            document.write(`Id=${id}<br>Name=${name}<br>Price=${price}<br>Stock=${stock}<br>`);
+        }
+        var data=[1,"TV",34000.33,true];
+        Details(...data);
+        Details(...[2,"Shoes",3400.33,true]);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
