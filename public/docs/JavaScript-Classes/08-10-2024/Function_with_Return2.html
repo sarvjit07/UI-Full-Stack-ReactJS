@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function_with_Return-Example-3</title>
+    <script>
+        function Component(componentName){
+            if(componentName==="grid"){
+                return "<table border='1'><tr><td>Name</td></tr></table>";
+            }else{
+                return "<div>Card</div>"
+            }
+        }
+        document.write(Component("grid"));
+        document.write(Component("card"));
+
+    </script>
+
+</head>
+<body>
+    <h1>- A function can have multiple return statements defined to handle conditional rendering.
+    </h1>
+</body>
+</html>
