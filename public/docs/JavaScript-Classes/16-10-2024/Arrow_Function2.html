@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow_Function-Example-3</title>
+    <script>
+        var products=[
+            {Name:"TV",Category:"Electronics"},
+            {Name:"Mobile",Category:"Electronics"},
+            {Name:"Nike",Category:"Footwear"},
+            {Name:"Jeans",Category:"Fashion"}
+        ]
+        /*
+        var electronics=products.filter(function(product){
+            return product.Category==="Electronics";
+        })
+        console.log(electronics);
+        */
+       var electronics=products.filter(product=>product.Category==="Electronics");
+       console.log(electronics)
+    </script>
+</head>
+<body>
+    <h1>Test</h1>
+</body>
+</html>
