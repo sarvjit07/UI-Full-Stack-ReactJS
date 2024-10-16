@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function_with_Return-Example-2</title>
+    <script>
+        function List(){
+            return ["All","Electronics","Fashion"];
+        }
+        function Rating(){
+            return {Rate:4.5,Count:3000}
+        }
+        function Print(){
+            return function(){
+                document.write(`List=${List().toString()}<br>Rating=${Rating().Rate}[${Rating().Count}]`);
+            }
+        }
+        Print()();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
