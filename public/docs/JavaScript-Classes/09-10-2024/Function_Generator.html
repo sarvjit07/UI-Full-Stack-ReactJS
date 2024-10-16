@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function_Generator</title>
+    <script>
+        function* ReadCollection(){
+            yield 10,
+            yield ["Delhi,Hyd,Ara"],
+            yield {Rate:4.2}
+        }
+        var collection=ReadCollection();
+        console.log(collection.next());
+        console.log(collection.next());
+        console.log(collection.next());
+        console.log(collection.next());
+
+    </script>
+</head>
+<body>
+    <h1>Function_Generator</h1>
+</body>
+</html>
