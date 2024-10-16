@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple_Parameters_In_Function</title>
+    <script>
+        function Details(id,name,price,stock){
+            if(price){
+                document.write(`Id=${id}<br>Name=${name}<br>Price=${price}<br>Stock=${stock}<br>`);
+            }
+            else{
+                document.write(`Id=${id}<br>Name=${name}<br>Stock=${stock}<br>`);
+            }
+        }
+        Details(1,"TV",false,true);
+       
+        Details(2,"Mobile",20000.45,false);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
