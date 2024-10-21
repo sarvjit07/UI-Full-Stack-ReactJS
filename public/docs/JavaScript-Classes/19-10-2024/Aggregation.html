@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aggregation</title>
+    <script>
+        class HDFC_BANK_Version_1 {
+            Personal = "Personal Banking Services<br>";
+            Print() {
+                document.write(`${this.Personal}`);
+            }
+        }
+        class HDFC_BANK_Version_2 {
+            NRI = "NRI Banking Services<br>";
+            Print() {
+                let obj = new HDFC_BANK_Version_1();
+                obj.Print();
+                document.write(`${this.NRI}`);
+            }
+        }
+        class HDFC_BANK_Version_3 {
+            Loans = "Personal and Housing Loans Servies<br>";
+            Print() {
+                let obj = new HDFC_BANK_Version_2();
+                obj.Print();
+                document.write(`${this.Loans}`);
+            }
+        }
+
+        function InstallClick() {
+            switch (document.querySelector("select").value) {
+                case "ver1":
+                    document.write("<h2>Version-1 Installed</h2>");
+                    let obj1 = new HDFC_BANK_Version_1();
+                    obj1.Print();
+                    break;
+                case "ver2":
+                    document.write("<h2>Version-2 Installed</h2>");
+                    let obj2 = new HDFC_BANK_Version_2();
+                    obj2.Print();
+                    break;
+                case "ver3":
+                    document.write("<h2>Version-3[Latest] Installed</h2>");
+                    let obj3 = new HDFC_BANK_Version_3();
+                    obj3.Print();
+                    break;
+                default:
+                    document.write("Please Select a Version");
+                    break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <dl>
+        <h3>Install HDFC Bank</h3>
+        <dt>Select Version</dt>
+        <dd>
+            <select>
+                <option>Select Version</option>
+                <option value="ver1">Version-1</option>
+                <option value="ver2">Version-2</option>
+                <option value="ver3">Version-Latest</option>
+            </select>
+            <button onclick="InstallClick()">Install</button>
+        </dd>
+    </dl>
+
+</body>
+
+</html>
