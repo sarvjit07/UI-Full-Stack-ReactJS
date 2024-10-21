@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance_Rule</title>
+    <script>
+        class Super{
+            constructor(){
+                let x=4;
+                document.write("Super class constructor<br>");
+                return x;
+            }
+        }
+        class Derived extends Super{
+            constructor(){
+                super();
+                document.write("Derived class constructor");
+            }
+        }
+        let obj=new Derived();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
