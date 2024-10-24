@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touch_Events</title>
+    <script>
+        function GetDetails(msg){
+            document.querySelector("h1").innerHTML=msg;
+        }
+    </script>
+</head>
+<body>
+    <img src="../../../images/women.jpg" width="200" height="200" ontouchstart="GetDetails('30% Off')">
+    <img src="../../../images/men.jpg" width="200" height="200" ontouchstart="GetDetails('40% Off')">
+    <img src="../../../images/kid.jpg" width="200" height="200" ontouchstart="GetDetails('50% Off')">
+    <h1></h1>
+</body>
+</html>
