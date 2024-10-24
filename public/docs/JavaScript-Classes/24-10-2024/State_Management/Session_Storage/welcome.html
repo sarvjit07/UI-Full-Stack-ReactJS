@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session_Storage</title>
+    <script>
+        function SessionEnd() {
+            alert('Your session Timed Out - Please relogin');
+            sessionStorage.removeItem("username");
+            location.href="./login.html"
+        }
+        function bodyload(){
+            if(sessionStorage.getItem("username")===null){
+                location.href="./login.html";
+            }else{
+                document.getElementById("user").innerHTML=sessionStorage.getItem("username");
+            }
+        }
+
+        function SignOutClick(){
+            sessionStorage.removeItem("username");
+            location.href="./login.html"
+        }
+    </script>
+
+</head>
+
+<body onload="bodyload()">
+    <h2>Welcome <span id="user"></span><button onclick="SignOutClick()">SignOut</button></h2>
+
+</body>
+
+</html>

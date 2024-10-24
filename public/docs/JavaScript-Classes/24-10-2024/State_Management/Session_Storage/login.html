@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session_Storage</title>
+    <script>
+        function LoginClick(){
+            var userName=document.getElementById("txtName").value;
+            sessionStorage.setItem("username",userName);
+            location.href="./welcome.html";
+        }
+    </script>
+</head>
+<body>
+    <h2>Login</h2>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text" id="txtName"></dd>
+    </dl>
+    <button onclick="LoginClick()">Login</button>
+</body>
+</html>
