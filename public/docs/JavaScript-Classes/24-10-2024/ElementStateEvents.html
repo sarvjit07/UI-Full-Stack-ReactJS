@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element_State_Events</title>
+    <script>
+        function Focus(){
+            document.getElementById("msg").innerHTML="Name in Block Letters Only".fontcolor("red");
+        }
+        function Blur(){
+            var username=document.getElementById("txtName").value;
+            document.getElementById("txtName").value=username.toUpperCase();
+            document.getElementById("msg").innerHTML=" ";
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text" id="txtName" onblur="Blur()" onfocus="Focus()"></dd>
+        <dd id="msg"></dd>
+    </dl>
+</body>
+</html>
