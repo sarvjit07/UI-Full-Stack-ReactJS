@@ -1,0 +1,23 @@
+<script>
+    var username=prompt("Enter User Name");
+    var role=prompt("Enter Your Role", "Admin|Customer");
+
+    class Product{
+        _price;
+        get Price(){
+            return this._price;
+        }
+        set Price(newPrice){
+            if(role==="Admin"){
+                this._price=newPrice;
+            }else{
+                document.write(`Hello ! ${username} you are not authorized to set price`);
+            }
+        }
+    }
+    let obj=new Product();
+    obj.Price=prompt("Enter Product Price");
+    if(obj.Price){
+        document.write(`Product Price is ${obj.Price}`);
+    }
+</script>
