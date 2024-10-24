@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyload(){
+            var span=document.createElement("span");
+            span.innerHTML=location.search.slice(location.search.indexOf("=")+1);
+            document.querySelector("h2").appendChild(span)
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <h2> Welcome </h2>
+    
+</body>
+</html>
