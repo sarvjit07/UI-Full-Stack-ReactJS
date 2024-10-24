@@ -1,0 +1,20 @@
+<script>
+    class Product{
+        Rating={
+            Hyderabad:{
+                Customer:{
+                    Rate:4.7,
+                },
+                Vendor:{
+                    Rate:4.8
+                }
+            }
+        }
+        get HydVendorRating(){
+            return this.Rating.Hyderabad.Vendor.Rate;
+        }
+    }
+    let obj=new Product();
+    obj.HydVendorRating=prompt("Enter New Rating for Hyd Vendor"); // readonly
+    document.write(`Hyd vendor rating ${obj.HydVendorRating}`);
+</script>
