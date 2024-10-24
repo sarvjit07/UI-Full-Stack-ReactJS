@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+    <script>
+        function bodyLoad(){
+            document.getElementById("user").innerHTML=document.cookie.slice(document.cookie.indexOf("=")+1);
+        }
+        function SignoutClick(){
+            document.cookie="";
+            location.href="./login.html";
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <h2>welcome <span id="user"></span><button onclick="SignoutClick()">Signout</button></h2>
+    
+</body>
+</html>
