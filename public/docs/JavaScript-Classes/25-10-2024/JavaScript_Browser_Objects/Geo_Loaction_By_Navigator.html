@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo_Loaction_By_Navigator</title>
+    <script>
+        navigator.geolocation.getCurrentPosition((position)=>{
+            document.write(`
+            Latitude:${position.coords.latitude}<br>
+            Longitude:${position.coords.longitude}
+            `);
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
