@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document Object Example</title>
+
+</head>
+<body>
+    <h1 id="header">Hello, World!</h1>
+    <p class="intro">This is an example paragrapgh</p>
+    <div id="content"></div>
+    <button onclick="manipulateDOM()">Click to Manipulate DOM</button>
+
+
+    <script>
+        function manipulateDOM(){
+            document.write("<p>Document write example: This text was written using document.write()</p>")
+        }
+        
+        let introPara=document.querySelector(".intro");
+        introPara.style.color="blue";
+
+
+        let header=document.getElementById("header");
+        header.style.fontSize="24px";
+
+
+        let paragrapghs=document.getElementsByTagName("p");
+        for(let i=0;i<paragrapghs.length;i++){
+            paragrapghs[i].style.backgroundColor="lightgray";
+        }
+
+
+        let newParagraph=document.createElement("p");
+        newParagraph.innerHTML="This paragraph was added using appendChild()"
+        document.getElementById("content").appendChild(newParagraph);
+    </script>
+</body>
+</html>
