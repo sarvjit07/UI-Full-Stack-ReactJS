@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugin_By_Navigator</title>
+    <script>
+        for(var plugin of navigator.plugins){
+            document.write(plugin.name+"<br>");
+        }
+        if(navigator.plugins['PDF Viewer']){
+            document.write("You can watch PDF documents");
+        }else{
+            alert("Please install plugin for your browser");
+            location.href="https://www.adobe.com/download";
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
