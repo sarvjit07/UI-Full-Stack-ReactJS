@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        function VerifyUser(e){
+            console.log(e.charCode);
+            var userid=document.getElementById("txtId").value;
+            var lblError=document.getElementById("lblError");
+            fetch("../../../../data/users.json")
+            .then(response=>response.json())
+            .then(users=>{
+                for(var user of users){
+                    if(user.UserId===userid){
+                        lblError.innerHTML="User Id Taken - Try Another".fontcolor("red");
+                    break;
+                    }
+                    else{
+                        lblError.innerHTML="User Id Available".fontcolor("green");
+                    }
+                }
+
+            })
+        }
+        function VerifyCaps(e){
+            var passwordError=document.getElementById("passwordError");
+            if(e.which>=65 && e.which<=90){
+                passwordError.style.display="block";
+                passwordError.style.color="gold";
+            }else{
+                passwordError.style.display="none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>Register User</h3>
+    <dl>
+        <dt>User Id</dt>
+        <dd><input type="text" onkeyup="VerifyUser(event)" id="txtId"></dd>
+        <dd id="lblError"></dd>
+        <dt>Password</dt>
+        <dd><input type="password" onkeypress="VerifyCaps(event)" id="txtPwd"></dd>
+        <dd id="passwordError" style="display: none;">
+            <span class="bi bi-exclamation-triangle-fill">Warning:Caps ON</span>
+        </dd>
+    </dl>
+</body>
+</html>
