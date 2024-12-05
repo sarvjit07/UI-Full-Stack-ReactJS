@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function bodyload(){
+            fetch('../../../data/mobile.json')
+            .then(response=>response.json())
+            .then(mobiles=>{
+                mobiles.map(mobile=>{
+                    var pic=document.createElement("img");
+                    pic.src=mobile.img_src;
+                    pic.width="100";
+                    pic.className="my-4 d-block";
+                    pic.addEventListener("mouseover",(e)=>{
+                        document.getElementById("imgPreview").src=e.target.src;
+                    })
+                    document.getElementById("thumbnail").appendChild(pic);
+                })
+            })
+        }
+    </script>
+    <style>
+        #thumbnail img:hover{
+            border:2px solid blue;
+        }
+    </style>
+</head>
+<body class="container-fluid" onload="bodyload()">
+    <div class="row mt-4">
+        <div class="col-2">
+            <div id="thumbnail">
+
+            </div>
+        </div>
+        <div class="col-10">
+            <img src="../../../images/1.png" width="400" height="500" id="imgPreview">
+        </div>
+    </div>
+</body>
+</html>
